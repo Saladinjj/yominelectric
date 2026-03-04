@@ -428,6 +428,15 @@ body.light .mlb { background: rgba(0,0,0,.06); border-color: rgba(0,0,0,.12); }
     height: 32px !important; 
     font-size: 14px !important;
   }
+  .n-rt .lbtn {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 }
 
 /* ─── RTL OVERRIDES — keep nav/logo LTR ─── */
