@@ -249,9 +249,11 @@ body.light .ctasec::before{background:radial-gradient(ellipse 70% 60% at 50% 50%
 body.light ::-webkit-scrollbar-track{background:#f2f0ec}
 body.light ::-webkit-scrollbar-thumb{background:#d0cdc6}
 /* FLOATING BUTTONS */
-.wa-btn{position:fixed;bottom:28px;right:28px;z-index:500;width:54px;height:54px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,.5);transition:transform .25s,box-shadow .25s;text-decoration:none}
+.wa-btn{position:fixed;bottom:28px;right:28px;z-index:500;width:54px;height:54px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,.5);transition:transform .25s,box-shadow .25s,opacity .2s;text-decoration:none}
 .wa-btn:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 12px 36px rgba(0,0,0,.6)}
 .wa-btn svg{width:28px;height:28px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.2))}
+/* Hide float buttons when mobile menu is open */
+body:has(.mob.op) .wa-btn,body:has(.mob.op) #wechat-index-btn{opacity:0;pointer-events:none}
 .theme-pair{display:flex;gap:4px;flex-shrink:0}
 .tpbtn{background:rgba(255,255,255,.06);border:1px solid var(--bdr);color:var(--mt);width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;font-size:16px;line-height:1;padding:0}
 .tpbtn:hover{background:rgba(255,255,255,.12);color:var(--tx)}

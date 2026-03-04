@@ -418,7 +418,9 @@
       width: 100%;
       text-align: left;
       font-family: var(--ss);
-      border-left: 2px solid transparent
+      border-left: 2px solid transparent;
+      position: relative;
+      overflow: hidden
     }
 
     .sb-all:hover,
@@ -432,6 +434,12 @@
       color: var(--ac);
       background: rgba(200, 169, 110, .06);
       border-left-color: var(--ac)
+    }
+
+    /* Sidebar ripple (softer, same animation) */
+    .sb-all .ripple-wave,
+    .sb-item .ripple-wave {
+      background: rgba(200, 169, 110, .15)
     }
 
     .sb-item {
@@ -448,7 +456,9 @@
       width: 100%;
       text-align: left;
       font-family: var(--ss);
-      border-left: 2px solid transparent
+      border-left: 2px solid transparent;
+      position: relative;
+      overflow: hidden
     }
 
     .sb-item-inner {
@@ -763,7 +773,18 @@
       background: var(--bg);
       border-bottom: 1px solid var(--bds);
       overflow-x: auto;
-      gap: 6px
+      gap: 8px;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      /* Fade hint on edges to show scrollability */
+      -webkit-mask-image: linear-gradient(to right, transparent 0, black 20px, black calc(100% - 20px), transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0, black 20px, black calc(100% - 20px), transparent 100%);
+    }
+
+    .mob-filter::-webkit-scrollbar {
+      display: none
     }
 
     .mob-filter.show {
@@ -774,20 +795,43 @@
       background: var(--bgc);
       border: 1px solid var(--bds);
       color: var(--mt);
-      padding: 7px 13px;
+      padding: 7px 14px;
       border-radius: 20px;
       font-size: 11.5px;
       cursor: pointer;
       white-space: nowrap;
-      transition: all .2s;
+      transition: background .2s, border-color .2s, color .2s, box-shadow .2s, transform .15s;
       font-family: var(--ss);
-      flex-shrink: 0
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mfbtn:active {
+      transform: scale(.94)
     }
 
     .mfbtn.active {
-      background: rgba(200, 169, 110, .1);
-      border-color: rgba(200, 169, 110, .35);
-      color: var(--ac)
+      background: rgba(200, 169, 110, .12);
+      border-color: rgba(200, 169, 110, .4);
+      color: var(--ac);
+      box-shadow: 0 0 12px rgba(200, 169, 110, .15)
+    }
+
+    /* Ripple / water effect */
+    @keyframes mf-ripple {
+      0% { transform: scale(0); opacity: .5 }
+      100% { transform: scale(3.5); opacity: 0 }
+    }
+
+    .mfbtn .ripple-wave {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(200, 169, 110, .4);
+      transform: scale(0);
+      animation: mf-ripple .55s cubic-bezier(.4, 0, .2, 1) forwards;
+      pointer-events: none
     }
 
     /* RESPONSIVE */
@@ -1289,12 +1333,12 @@
   </nav>
   <div class="mob" id="mob">
     <button class="mob-x" id="mob-x">✕</button>
-    <a href="index.html">Home</a>
-    <a href="product.html" class="active">Products</a>
-    <a href="solutions.html">Solutions</a>
-    <a href="process.html">Process</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html" data-t="nav_home">Home</a>
+    <a href="product.html" class="active" data-t="nav_products">Products</a>
+    <a href="solutions.html" data-t="nav_solutions">Solutions</a>
+    <a href="process.html" data-t="nav_process">Process</a>
+    <a href="about.html" data-t="nav_about">About</a>
+    <a href="contact.html" data-t="nav_contact">Contact</a>
     <div class="mob-lngs">
       <button class="mlb" data-lang="en">EN</button>
       <button class="mlb" data-lang="fr">FR</button>
@@ -1368,16 +1412,46 @@
 
   <!-- FOOTER -->
   <footer>
-    <div>
-      <div class="ft-brand-n">Yomin Electric</div>
-      <div class="ft-sub">Zhejiang Yomin Electric Co., Ltd. · Precision Energy Metering Solutions</div>
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <span style="font-family:var(--sf);font-size:20px;color:var(--tx);">Yomin Electric</span>
+        <p data-t="ft_desc">Precision energy metering solutions for global buyers. Trusted in 95+ countries since 2005.</p>
+      </div>
+      <div class="ft-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="product.html?category=energy-meter">Energy Meters</a></li>
+          <li><a href="product.html?category=current-transformer">Current Transformers</a></li>
+          <li><a href="product.html?category=voltage-protector">Voltage Protectors</a></li>
+          <li><a href="product.html?category=analog-meter">Analog Meters</a></li>
+          <li><a href="product.html?category=smart-gateway">Smart Gateways</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html#history">Our History</a></li>
+          <li><a href="about.html#factory">Our Factory</a></li>
+          <li><a href="about.html#certifications">Certifications</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:sales@yominelectric.com">sales@yominelectric.com</a></li>
+          <li><a href="https://wa.me/8618957734521" target="_blank">WhatsApp</a></li>
+          <li><a href="https://alibaba.com" target="_blank">Alibaba Store</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="ft-links">
-      <a href="index.html">Home</a>
-      <a href="product.html">Products</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+    <div class="ft-bot">
+      <p data-t="ft_copy">© 2024 Yomin Electric Co., Ltd. All rights reserved.</p>
+      <div class="ft-soc">
+        <a href="https://wa.me/8618957734521" target="_blank" title="WhatsApp">💬</a>
+        <a href="mailto:sales@yominelectric.com" title="Email">✉</a>
+        <a href="https://alibaba.com" target="_blank" title="Alibaba">🏪</a>
+      </div>
     </div>
   </footer>
 
@@ -1540,7 +1614,22 @@
       <span class="sb-count">${n}</span></button>`;
       });
       list.innerHTML = html;
-      list.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', () => setFilter(b.dataset.filter)));
+      list.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', (e) => {
+        addRipple(b, e);
+        setFilter(b.dataset.filter);
+      }));
+    }
+
+    function addRipple(btn, e) {
+      const rect = btn.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = (e.clientX - rect.left) - size / 2;
+      const y = (e.clientY - rect.top) - size / 2;
+      const wave = document.createElement('span');
+      wave.className = 'ripple-wave';
+      wave.style.cssText = `width:${size}px;height:${size}px;left:${x}px;top:${y}px`;
+      btn.appendChild(wave);
+      wave.addEventListener('animationend', () => wave.remove());
     }
 
     function buildMobileFilter() {
@@ -1548,13 +1637,16 @@
       const counts = {};
       ALL.forEach(p => { counts[p.category] = (counts[p.category] || 0) + 1; });
       const allLabel = (typeof T !== 'undefined' && typeof currentLang !== 'undefined' && T[currentLang] && T[currentLang].prod_all) ? T[currentLang].prod_all : 'All';
-      let html = `<button class="mfbtn ${activeFilter === 'all' ? 'active' : ''}" data-filter="all">${esc(allLabel)} (${ALL.length})</button>`;
+      let html = `<button class="mfbtn ${activeFilter === 'all' ? 'active' : ''}" data-filter="all">🗂 ${esc(allLabel)} (${ALL.length})</button>`;
       CATS.forEach(c => {
         const n = counts[c.id] || 0; if (!n) return;
         html += `<button class="mfbtn ${activeFilter === c.id ? 'active' : ''}" data-filter="${esc(c.id)}">${c.icon} ${esc(getCatLabel(c))} (${n})</button>`;
       });
       bar.innerHTML = html;
-      bar.querySelectorAll('.mfbtn').forEach(b => b.addEventListener('click', () => setFilter(b.dataset.filter)));
+      bar.querySelectorAll('.mfbtn').forEach(b => b.addEventListener('click', (e) => {
+        addRipple(b, e);
+        setFilter(b.dataset.filter);
+      }));
     }
 
     function setFilter(val) {
@@ -1564,6 +1656,20 @@
       document.querySelectorAll('.mfbtn').forEach(b => b.classList.toggle('active', b.dataset.filter === val));
       const t = document.getElementById('area-title');
       if (t) { if (val === 'all') { const allLabel = (typeof T !== 'undefined' && typeof currentLang !== 'undefined' && T[currentLang] && T[currentLang].prod_all) ? T[currentLang].prod_all : 'All Products'; t.textContent = allLabel; } else { const c = CATS.find(c => c.id === val); t.textContent = c ? getCatLabel(c) : val; } }
+      // Scroll active mobile filter button into center view
+      const activeMfBtn = document.querySelector('.mfbtn.active');
+      if (activeMfBtn) {
+        const bar = document.getElementById('mob-filter');
+        if (bar) {
+          const btnLeft = activeMfBtn.offsetLeft;
+          const btnWidth = activeMfBtn.offsetWidth;
+          const barWidth = bar.offsetWidth;
+          bar.scrollTo({ left: btnLeft - barWidth / 2 + btnWidth / 2, behavior: 'smooth' });
+        }
+      }
+      // Scroll active sidebar item into view (desktop)
+      const activeSbItem = document.querySelector('.sb-item.active, .sb-all.active');
+      if (activeSbItem) activeSbItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       shown = PAGE; applyAndRender();
     }
 
