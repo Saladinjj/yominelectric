@@ -127,7 +127,7 @@ h2.stitle{font-family:var(--sf);font-size:clamp(28px,4.5vw,52px);line-height:1.1
 .gcat{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--ac);margin-bottom:3px}
 .gname{font-size:12px;font-weight:500;color:var(--tx)}
 /* SERVICES */
-.stabs{display:flex;gap:2px;margin-bottom:44px;background:var(--sur);border-radius:12px;padding:4px;width:fit-content;flex-wrap:wrap}
+.stabs{display:flex;gap:2px;margin-bottom:44px;background:var(--sur);border-radius:12px;padding:4px;width:fit-content;flex-wrap:wrap;justify-content:center}
 .tbtn{background:none;border:none;color:var(--mt);padding:10px 22px;border-radius:9px;font-size:13px;font-weight:500;cursor:pointer;transition:all .25s}
 .tbtn.act{background:var(--bgc2);color:var(--tx)}
 .sp{display:none;gap:60px;align-items:center;flex-wrap:wrap}
@@ -320,6 +320,8 @@ body.light .tpbtn-act{background:rgba(184,148,26,.15) !important;border-color:rg
   .wa-btn{width:44px;height:44px;bottom:16px!important;right:16px!important}
   .wa-btn svg{width:22px;height:22px}
   #wechat-index-btn{bottom:68px!important;right:16px!important}
+  .stabs{width:100%;justify-content:center;margin-bottom:32px}
+  .stabs .tbtn{flex:0 0 auto;font-size:11px;padding:10px 12px}
 }
 @media(max-width:480px){
   section{padding:48px 16px}
@@ -330,6 +332,8 @@ body.light .tpbtn-act{background:rgba(184,148,26,.15) !important;border-color:rg
   .scard{min-width:70px;padding:10px 12px}
   .snum{font-size:20px}
   .slbl{font-size:9px}
+  .stabs{gap:4px;padding:3px}
+  .stabs .tbtn{padding:8px 10px;font-size:10px}
 }
 
 /* ── LIGHT MODE FULL OVERRIDE ────────────────────────────── */
