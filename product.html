@@ -436,10 +436,15 @@
       border-left-color: var(--ac)
     }
 
-    /* Sidebar ripple (softer, same animation) */
+    /* Sidebar ripple (same base styles + softer color) */
     .sb-all .ripple-wave,
     .sb-item .ripple-wave {
-      background: rgba(200, 169, 110, .15)
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(200, 169, 110, .15);
+      transform: scale(0);
+      animation: mf-ripple .55s cubic-bezier(.4, 0, .2, 1) forwards;
+      pointer-events: none
     }
 
     .sb-item {
