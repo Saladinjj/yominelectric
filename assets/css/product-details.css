@@ -327,28 +327,196 @@
 }
 
 @media (max-width: 768px) {
-  .breadcrumb { padding: 90px 24px 0; }
-  .product-main, .related-section { padding: 40px 24px 60px; }
-  .product-actions { flex-direction: column; }
-  .btn-quote, .btn-datasheet { min-width: unset; }
-  .related-grid { grid-template-columns: 1fr; }
+  .breadcrumb { 
+    padding: 80px 20px 0; 
+    font-size: 12px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .bc-sep { font-size: 10px; }
+  .product-main, .related-section { 
+    padding: 32px 20px 60px; 
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  .product-main { gap: 40px; }
+  .product-name { 
+    font-size: clamp(22px, 6vw, 32px); 
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+  }
+  .product-desc { 
+    font-size: 13px; 
+    margin-bottom: 24px; 
+    padding-bottom: 24px; 
+  }
+  .prod-badge-row { margin-bottom: 12px; gap: 6px; }
+  .prod-badge, .prod-cert-badge { 
+    font-size: 8px; 
+    padding: 3px 10px; 
+  }
+  
+  /* Gallery */
+  .gallery-main { 
+    border-radius: 16px; 
+    margin-bottom: 12px;
+  }
+  .gallery-main img { padding: 20px; }
   .gallery-thumbs { gap: 8px; }
-  .thumb { width: 60px; height: 60px; }
+  .thumb { 
+    width: 56px; 
+    height: 56px; 
+    border-radius: 8px;
+  }
+  
+  /* Specs table */
+  .specs-title { 
+    font-size: 10px; 
+    margin-bottom: 12px;
+  }
+  .specs-table { 
+    border-radius: 12px; 
+    margin-bottom: 24px;
+  }
+  .spec-row { grid-template-columns: 1fr 1.5fr; }
+  .spec-key, .spec-val { 
+    padding: 10px 12px; 
+    font-size: 11px; 
+  }
+  
+  /* Applications */
+  .applications { 
+    margin-bottom: 24px; 
+    padding-bottom: 24px; 
+  }
+  .app-chips { gap: 6px; margin-top: 10px; }
+  .app-chip { 
+    padding: 6px 12px; 
+    font-size: 11px; 
+    border-radius: 6px;
+  }
+  
+  /* Action buttons - stacked */
+  .product-actions { 
+    flex-direction: column; 
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .btn-quote, .btn-datasheet { 
+    min-width: unset; 
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+  .whatsapp-btn { 
+    width: 100%; 
+    padding: 12px 20px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+  
+  /* Related products */
+  .related-section { 
+    padding: 48px 20px; 
+    border-top: 1px solid var(--bds);
+  }
+  .related-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px; 
+    margin-top: 32px;
+  }
 }
 
 @media (max-width: 480px) {
-  .breadcrumb { padding: 80px 16px 0; font-size: 11px; }
-  .product-main { padding: 28px 16px 48px; gap: 32px; }
-  .related-section { padding: 40px 16px 48px; }
-  .product-name { font-size: clamp(22px, 7vw, 32px); letter-spacing: -.5px; }
-  .product-desc { font-size: 13px; margin-bottom: 24px; padding-bottom: 24px; }
+  .breadcrumb { 
+    padding: 70px 16px 0; 
+    font-size: 11px; 
+    flex-wrap: wrap;
+  }
+  .product-main { 
+    padding: 24px 16px 40px; 
+    gap: 28px; 
+    max-width: 100vw;
+  }
+  .related-section { 
+    padding: 36px 16px 40px; 
+  }
+  .product-name { 
+    font-size: clamp(20px, 7vw, 28px); 
+    letter-spacing: -0.5px; 
+    margin-bottom: 14px;
+    line-height: 1.1;
+  }
+  .product-desc { 
+    font-size: 12px; 
+    margin-bottom: 20px; 
+    padding-bottom: 20px;
+    line-height: 1.75;
+  }
+  
+  /* Gallery compact */
+  .gallery-main { 
+    border-radius: 14px; 
+    margin-bottom: 10px;
+  }
+  .gallery-main img { padding: 16px; }
   .gallery-thumbs { gap: 6px; }
-  .thumb { width: 52px; height: 52px; border-radius: 8px; }
+  .thumb { 
+    width: 48px; 
+    height: 48px; 
+    border-radius: 6px;
+    border-width: 2px;
+  }
   .thumb img { padding: 4px; }
+  
+  /* Specs compact */
   .specs-table { border-radius: 10px; }
-  .spec-key, .spec-val { padding: 10px 12px; font-size: 11px; }
-  .btn-quote, .btn-datasheet { padding: 14px 20px; font-size: 13px; border-radius: 10px; }
-  .whatsapp-btn { padding: 11px 20px; font-size: 12px; border-radius: 10px; }
-  .app-chip { padding: 6px 12px; font-size: 11px; }
-  .prod-badge-row { gap: 6px; }
+  .specs-title { font-size: 9px; margin-bottom: 10px; }
+  .spec-row { grid-template-columns: 1fr 1.4fr; }
+  .spec-key, .spec-val { 
+    padding: 8px 10px; 
+    font-size: 10px; 
+  }
+  .spec-key { border-right: 1px solid var(--bds); }
+  
+  /* Applications compact */
+  .applications { 
+    margin-bottom: 20px; 
+    padding-bottom: 20px; 
+  }
+  .app-chip { 
+    padding: 6px 10px; 
+    font-size: 11px; 
+    border-radius: 6px;
+  }
+  .app-chip-icon { font-size: 12px; }
+  
+  /* Buttons compact */
+  .product-actions { gap: 8px; margin-bottom: 20px; }
+  .btn-quote, .btn-datasheet { 
+    padding: 13px 18px; 
+    font-size: 13px; 
+    border-radius: 10px; 
+  }
+  .whatsapp-btn { 
+    padding: 11px 18px; 
+    font-size: 12px; 
+    border-radius: 10px; 
+  }
+  
+  /* Badges compact */
+  .prod-badge-row { gap: 6px; margin-bottom: 10px; }
+  .prod-badge, .prod-cert-badge { 
+    font-size: 8px; 
+    padding: 3px 10px; 
+    border-radius: 20px;
+  }
+  
+  /* Related products - single column */
+  .related-grid { 
+    grid-template-columns: 1fr; 
+    gap: 12px; 
+    margin-top: 24px;
+  }
 }

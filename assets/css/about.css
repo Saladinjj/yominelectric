@@ -468,40 +468,171 @@
 }
 
 @media (max-width: 768px) {
-  .intro-section, .history-section, .factory-section, .markets-section, .certs-section, .values-section { padding: 60px 20px; }
-  .stats-strip { padding: 40px 20px; grid-template-columns: repeat(2, 1fr); }
-  .stat-item { border-right: none; border-bottom: 1px solid var(--bds); }
+  /* Section padding with safe margins */
+  .intro-section, .history-section, .factory-section, .markets-section, .certs-section, .values-section { 
+    padding: 60px 20px; 
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Stats strip - 2x2 grid */
+  .stats-strip { 
+    padding: 40px 20px; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .stat-item { 
+    border-right: none; 
+    border-bottom: 1px solid var(--bds); 
+    padding: 20px 16px;
+  }
   .stat-num { font-size: clamp(28px, 8vw, 48px); }
+  .stat-lbl { font-size: 10px; letter-spacing: 1px; }
+  
+  /* Timeline - single column layout */
   .timeline::before { left: 24px; }
-  .tl-item { grid-template-columns: 48px 1fr; }
+  .tl-item { 
+    grid-template-columns: 48px 1fr; 
+    margin-bottom: 40px;
+  }
   .tl-item:nth-child(odd) .tl-content,
-  .tl-item:nth-child(even) .tl-content { grid-column: 2; text-align: left; padding: 0 0 0 20px; }
+  .tl-item:nth-child(even) .tl-content { 
+    grid-column: 2; 
+    text-align: left; 
+    padding: 0 0 0 20px; 
+  }
   .tl-item:nth-child(odd) .tl-dot,
   .tl-item:nth-child(even) .tl-dot { grid-column: 1; }
   .tl-item .tl-empty { display: none; }
-  .factory-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .markets-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .certs-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .values-grid { grid-template-columns: 1fr; gap: 16px; }
+  .tl-dot { width: 44px; height: 44px; }
+  .tl-year { font-size: 10px; }
+  .tl-content { padding: 20px; }
+  .tl-content h4 { font-size: 16px; }
+  .tl-content p { font-size: 12px; }
+  
+  /* Factory grid - 2 columns */
+  .factory-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    margin-top: 32px;
+  }
+  .factory-card { border-radius: 12px; }
+  .factory-cap { 
+    padding: 30px 12px 12px; 
+    font-size: 11px; 
+  }
+  
+  /* Markets grid - 3 columns */
+  .markets-grid { 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 8px; 
+    margin-top: 32px;
+  }
   .market-chip { padding: 8px 10px; gap: 8px; }
   .market-name { font-size: 12px; }
-  .intro-section { grid-template-columns: 1fr; gap: 32px; }
+  .market-flag-img { width: 28px; height: 20px; }
+  
+  /* Certs grid - 2 columns */
+  .certs-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px; 
+    margin-top: 32px;
+  }
+  .cert-card { padding: 24px 18px; }
+  .cert-name { font-size: 13px; }
+  .cert-desc { font-size: 10px; }
+  .cert-icon { width: 48px; height: 54px; }
+  
+  /* Values - single column */
+  .values-grid { 
+    grid-template-columns: 1fr; 
+    gap: 16px; 
+    margin-top: 32px;
+  }
+  .value-card { padding: 32px 24px; }
+  .val-num { font-size: 60px; top: -4px; right: 16px; }
+  .val-icon { width: 44px; height: 44px; font-size: 18px; }
+  .val-title { font-size: 18px; }
+  .val-desc { font-size: 12px; }
+  
+  /* Intro section - stacked */
+  .intro-section { 
+    grid-template-columns: 1fr; 
+    gap: 32px; 
+  }
+  .intro-text h2 { font-size: clamp(26px, 6vw, 40px); }
+  .intro-text p { font-size: 13px; }
+  .intro-img { border-radius: 16px; }
+  
+  /* Section headers */
+  .factory-section .stitle,
+  .values-section .stitle,
+  .markets-section .stitle,
+  .certs-section .stitle,
+  .history-section .stitle { font-size: clamp(24px, 6vw, 36px); }
+  .sdesc { font-size: 13px; margin-bottom: 32px; }
 }
 @media (max-width: 480px) {
-  .intro-section, .history-section, .factory-section, .markets-section, .certs-section, .values-section { padding: 48px 16px; }
-  .stats-strip { padding: 32px 16px; grid-template-columns: repeat(2, 1fr); }
-  .factory-grid { grid-template-columns: 1fr; }
+  .intro-section, .history-section, .factory-section, .markets-section, .certs-section, .values-section { 
+    padding: 48px 16px; 
+    max-width: 100vw;
+  }
+  .stats-strip { 
+    padding: 32px 16px; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .stat-item { padding: 16px 12px; }
+  .stat-num { font-size: clamp(24px, 9vw, 36px); }
+  .stat-lbl { font-size: 9px; }
+  
+  /* Factory - single column */
+  .factory-grid { grid-template-columns: 1fr; gap: 12px; }
+  
+  /* Markets - 2 columns */
   .markets-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .market-chip { padding: 8px 10px; gap: 6px; }
-  .market-flag-img { width: 26px; height: 18px; }
+  .market-chip { padding: 6px 8px; gap: 6px; }
+  .market-flag-img { width: 24px; height: 16px; }
   .market-name { font-size: 11px; }
+  
+  /* Certs - 2 columns smaller */
   .certs-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .cert-card { padding: 20px 14px; }
+  .cert-card { padding: 20px 14px; border-radius: 12px; }
   .cert-name { font-size: 12px; }
-  .values-grid { grid-template-columns: 1fr; }
-  .value-card { padding: 28px 22px; }
-  .tl-content { padding: 16px 18px; }
-  .tl-content h4 { font-size: 15px; }
+  .cert-desc { font-size: 9px; }
+  .cert-icon { width: 40px; height: 48px; }
+  
+  /* Values - single column compact */
+  .values-grid { grid-template-columns: 1fr; gap: 12px; }
+  .value-card { padding: 28px 20px; border-radius: 16px; }
+  .val-num { font-size: 48px; }
+  .val-icon { width: 40px; height: 40px; font-size: 16px; }
+  .val-title { font-size: 16px; margin-bottom: 8px; }
+  .val-desc { font-size: 11px; }
+  
+  /* Timeline compact */
+  .timeline::before { left: 20px; }
+  .tl-item { grid-template-columns: 40px 1fr; margin-bottom: 32px; }
+  .tl-dot { width: 40px; height: 40px; }
+  .tl-year { font-size: 9px; }
+  .tl-content { padding: 16px; border-radius: 12px; }
+  .tl-content h4 { font-size: 14px; }
+  .tl-content p { font-size: 11px; }
+  
+  /* Intro compact */
+  .intro-section { gap: 24px; }
+  .intro-text h2 { font-size: clamp(22px, 7vw, 28px); letter-spacing: -0.5px; }
+  .intro-text p { font-size: 12px; line-height: 1.75; }
+  .intro-img { border-radius: 12px; }
+  
+  /* Section headers smaller */
+  .factory-section .stitle,
+  .values-section .stitle,
+  .markets-section .stitle,
+  .certs-section .stitle,
+  .history-section .stitle { font-size: clamp(22px, 7vw, 28px); }
+  .slbl { font-size: 9px; margin-bottom: 8px; }
+  .sdesc { font-size: 12px; margin-bottom: 24px; }
 }
 
 /* ─── RTL ─── */
