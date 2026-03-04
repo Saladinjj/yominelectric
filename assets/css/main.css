@@ -318,7 +318,7 @@ body.light .lopt:hover { background: rgba(0,0,0,.05); }
 
 /* Mobile menu language buttons */
 .mob-lngs { display: flex; gap: 10px; margin-top: 6px; }
-.mlb { background: rgba(255,255,255,.08); border: 1px solid var(--bdr); color: var(--mt); padding: 7px 18px; border-radius: 8px; font-size: 13px; cursor: pointer; transition: all .2s; font-family: var(--ss); }
+.mlb { background: rgba(255,255,255,.08); border: 1px solid var(--bdr); color: var(--mt); padding: 6px 12px; border-radius: 16px; font-size: 12px; cursor: pointer; transition: all .2s; font-family: var(--ss); width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; }
 .mlb.act { background: rgba(200,169,110,.15); color: var(--ac); border-color: rgba(200,169,110,.3); }
 body.light .mlb { background: rgba(0,0,0,.06); border-color: rgba(0,0,0,.12); }
 
@@ -341,6 +341,10 @@ body.light .mlb { background: rgba(0,0,0,.06); border-color: rgba(0,0,0,.12); }
     height: 36px !important; 
     width: auto !important;
     display: block !important;
+    visibility: visible !important;
+  }
+  .n-logo-fb {
+    display: none !important;
   }
   .n-rt { 
     display: flex !important; 
@@ -349,9 +353,42 @@ body.light .mlb { background: rgba(0,0,0,.06); border-color: rgba(0,0,0,.12); }
     flex-shrink: 0;
     margin-left: auto;
   }
-  .n-ctr, .n-rt .lsw, .n-rt .ncta { 
+  .n-ctr, .n-rt .ncta { 
     display: none !important; 
   }
+  
+  /* Translation button - small and rounded */
+  .n-rt .lsw {
+    display: flex !important;
+  }
+  .n-rt .lbtn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    min-width: unset !important;
+  }
+  .n-rt .lbtn span:not(:first-child) {
+    display: none !important;
+  }
+  
+  /* Theme buttons positioned next to translation */
+  .n-rt .theme-pair {
+    display: flex !important;
+    gap: 4px !important;
+  }
+  .n-rt .tpbtn {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    border-radius: 50% !important;
+  }
+  
   .ham { 
     display: flex !important; 
     margin-left: 0 !important;

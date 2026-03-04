@@ -47,7 +47,7 @@ nav.sc{background:rgba(13,13,13,.99)}
 .mob a:hover{color:var(--ac)}
 .mob-x{position:absolute;top:22px;right:24px;background:none;border:none;color:var(--mt);font-size:26px;cursor:pointer}
 .mob-lngs{display:flex;gap:10px;margin-top:6px}
-.mlb{background:rgba(255,255,255,.08);border:1px solid var(--bdr);color:var(--mt);padding:7px 18px;border-radius:8px;font-size:13px;cursor:pointer;transition:all .2s}
+.mlb{background:rgba(255,255,255,.08);border:1px solid var(--bdr);color:var(--mt);padding:6px 12px;border-radius:16px;font-size:12px;cursor:pointer;transition:all .2s;width:36px;height:36px;display:flex;align-items:center;justify-content:center}
 .mlb.act{background:rgba(200,169,110,.15);color:var(--ac);border-color:rgba(200,169,110,.3)}
 /* HERO */
 .hero{min-height:100vh;display:flex;padding-top:68px;position:relative;overflow:hidden}
@@ -416,10 +416,11 @@ body.light .mob-x{color:#555}
   <a href="about.html" data-i18n="nav_about">About</a>
   <a href="contact.html" data-i18n="nav_contact">Contact</a>
   <div class="mob-lngs">
-    <button class="mlb act" onclick="sL('en')">🇬🇧 EN</button>
-    <button class="mlb" onclick="sL('fr')">🇫🇷 FR</button>
-    <button class="mlb" onclick="sL('ar')">🇸🇦 AR</button>
+    <button class="mlb act" onclick="sL('en')" data-l="en">🇬🇧</button>
+    <button class="mlb" onclick="sL('fr')" data-l="fr">🇫🇷</button>
+    <button class="mlb" onclick="sL('ar')" data-l="ar">🇸🇦</button>
   </div>
+</div>
 </div>
 <!-- NAV -->
 <nav id="nav">

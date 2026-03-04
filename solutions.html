@@ -96,8 +96,7 @@ body.light .bsec:hover{border-color:rgba(0,0,0,.3);color:#1a1a1a}
 <!-- NAV -->
 <nav id="nav">
   <a href="index.html" class="n-logo">
-    <img src="http://www.yominelectric.com/images/logo.png" alt="Yomin Electric" style="height:44px;width:auto;object-fit:contain;filter:brightness(1.1)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-    <span class="n-logo-fb" style="display:none">Yomin Electric</span>
+    <img src="logo.png" alt="Yomin Electric" style="height:44px;width:auto;object-fit:contain;filter:brightness(1.1);display:block">
   </a>
   <ul class="n-ctr">
     <li><a href="index.html"     data-t="nav_home">Home</a></li>
@@ -119,7 +118,10 @@ body.light .bsec:hover{border-color:rgba(0,0,0,.3);color:#1a1a1a}
         <button class="lopt" data-lang="ar">🇸🇦 العربية</button>
       </div>
     </div>
-    <!-- theme-pair injected by main.js -->
+    <div class="theme-pair">
+      <button class="tpbtn" id="btnDark" title="Dark mode" onclick="setTheme(false)">🌙</button>
+      <button class="tpbtn" id="btnLight" title="Light mode" onclick="setTheme(true)">☀️</button>
+    </div>
     <a href="contact.html" class="ncta" data-t="nav_cta">Get Quote</a>
     <button class="ham" id="ham"><span></span><span></span><span></span></button>
   </div>
