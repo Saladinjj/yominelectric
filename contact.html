@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact Yomin Electric — Send us a message, request a quote, or ask about OEM partnerships. We're available 24/7 and respond within 1 hour.">
+<title>Contact Us — Yomin Electric</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cur"></div>
+<div class="cur-r"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="n-logo">
+    <img src="http://www.yominelectric.com/images/logo.png" alt="Yomin Electric" style="height:44px;width:auto;object-fit:contain;filter:brightness(1.1)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <span class="n-logo-fb" style="display:none">Yomin Electric</span>
+  </a>
+  <ul class="n-ctr">
+    <li><a href="index.html" data-t="nav_home">Home</a></li>
+    <li><a href="product.html" data-t="nav_products">Products</a></li>
+    <li><a href="solutions.html" data-t="nav_solutions">Solutions</a></li>
+    <li><a href="process.html" data-t="nav_process">Process</a></li>
+    <li><a href="about.html" data-t="nav_about">About</a></li>
+    <li><a href="contact.html" class="active" data-t="nav_contact">Contact</a></li>
+  </ul>
+  <div class="n-rt">
+    <div class="lsw">
+      <button class="lbtn" aria-label="Language">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1.6 8.8h2.07a12.67 12.67 0 0 0 .94 3.53A6.42 6.42 0 0 1 1.6 8.8zm0-1.6a6.42 6.42 0 0 1 3.01-3.53A12.67 12.67 0 0 0 3.67 7.2H1.6zm8.73 4.73a12.67 12.67 0 0 0 .94-3.53h2.07a6.42 6.42 0 0 1-3.01 3.53zm-1.87.46c-.7-.62-1.28-1.8-1.6-3.19h3.2c-.32 1.39-.9 2.57-1.6 3.19zm0-9.38c.7.62 1.28 1.8 1.6 3.19h-3.2c.32-1.39.9-2.57 1.6-3.19zm2.81 3.19a12.67 12.67 0 0 0-.94-3.53 6.42 6.42 0 0 1 3.01 3.53h-2.07zm-5.54-3.53A12.67 12.67 0 0 0 4.8 7.2H2.73a6.42 6.42 0 0 1 3.01-3.53zM4.8 8.8a12.67 12.67 0 0 0 .94 3.53A6.42 6.42 0 0 1 2.73 8.8H4.8zm6.4 0h2.07a6.42 6.42 0 0 1-3.01 3.53A12.67 12.67 0 0 0 11.2 8.8zm0-1.6a12.67 12.67 0 0 0-.94-3.53 6.42 6.42 0 0 1 3.01 3.53H11.2z"/></svg>
+        <span id="lbtn-txt">EN</span>
+      </button>
+      <div class="ldrop">
+        <button class="lopt" data-lang="en">🇬🇧 English</button>
+        <button class="lopt" data-lang="fr">🇫🇷 Français</button>
+        <button class="lopt" data-lang="ar">🇸🇦 العربية</button>
+      </div>
+    </div>
+    <button class="ham" id="ham" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob" id="mob">
+  <button class="mob-x" id="mobX">✕</button>
+  <a href="index.html" data-t="nav_home">Home</a>
+  <a href="product.html" data-t="nav_products">Products</a>
+  <a href="solutions.html" data-t="nav_solutions">Solutions</a>
+  <a href="process.html" data-t="nav_process">Process</a>
+  <a href="about.html" data-t="nav_about">About</a>
+  <a href="contact.html" class="active" data-t="nav_contact">Contact</a>
+<div class="mob-lngs">
+    <button class="mlb" data-lang="en">EN</button>
+    <button class="mlb" data-lang="fr">FR</button>
+    <button class="mlb" data-lang="ar">AR</button>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="noise"></div>
+  <div class="page-hero-in">
+    <span class="ph-eyebrow" data-t="contact_eyebrow">Get In Touch</span>
+    <h1 class="ph-title" data-t="contact_title">Let's <em>Talk</em><br>Business</h1>
+    <p class="ph-desc" data-t="contact_desc">Whether you need a quote, product specifications, OEM partnership information, or just want to learn more — our team is available 24/7 and responds within 1 hour.</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<div class="contact-section">
+
+  <!-- FORM SIDE -->
+  <div class="rv">
+    <div class="contact-form-wrap">
+
+      <!-- Success state -->
+      <div class="form-success" id="form-success">
+        <div class="success-icon">✓</div>
+        <div class="success-title" data-t="contact_success_title">Message Sent!</div>
+        <p class="success-desc" data-t="contact_success_desc">Thank you for reaching out. Our sales team will review your message and respond within one business day.</p>
+        <a href="product.html" class="bpri" data-t="contact_success_btn" style="margin-top:28px;display:inline-flex;">Browse Products →</a>
+      </div>
+
+      <!-- Form fields -->
+      <div id="form-fields">
+        <div class="form-title" data-t="contact_form_title">Send Us a Message</div>
+        <p class="form-subtitle" data-t="contact_form_sub">Fill in the details below and we'll get back to you promptly with the information you need.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-name" data-t="contact_label_name">Full Name <span class="req">*</span></label>
+              <input class="form-input" id="f-name" type="text" name="name" data-field="name" data-t="contact_placeholder_name" placeholder="John Smith" autocomplete="name">
+              <div class="form-error-msg" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-email" data-t="contact_label_email">Email Address <span class="req">*</span></label>
+              <input class="form-input" id="f-email" type="email" name="email" data-field="email" data-t="contact_placeholder_email" placeholder="john@company.com" autocomplete="email">
+              <div class="form-error-msg" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-company" data-t="contact_label_company">Company / Organization</label>
+              <input class="form-input" id="f-company" type="text" name="company" data-field="company" data-t="contact_placeholder_company" placeholder="Your Company Ltd." autocomplete="organization">
+              <div class="form-error-msg" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-country" data-t="contact_label_country">Country <span class="req">*</span></label>
+              <select class="form-select" id="f-country" name="country" data-field="country" autocomplete="country-name">
+                <option value="" disabled selected data-t="contact_select_country">Select your country</option>
+              </select>
+              <div class="form-error-msg" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="f-subject" data-t="contact_label_subject">Subject</label>
+            <select class="form-select" id="f-subject" name="subject" data-field="subject">
+              <option value="" data-t="contact_select_topic">Select a topic</option>
+              <option value="Product Inquiry" data-t="contact_opt1">Product Inquiry</option>
+              <option value="Quote Request" data-t="contact_opt2">Quote Request</option>
+              <option value="OEM / ODM Partnership" data-t="contact_opt3">OEM / ODM Partnership</option>
+              <option value="Technical Support" data-t="contact_opt4">Technical Support</option>
+              <option value="Certifications / Documentation" data-t="contact_opt5">Certifications / Documentation</option>
+              <option value="Shipping & Logistics" data-t="contact_opt6">Shipping & Logistics</option>
+              <option value="Other" data-t="contact_opt7">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="f-message" data-t="contact_label_message">Message <span class="req">*</span></label>
+            <textarea class="form-textarea" id="f-message" name="message" data-field="message" data-t="contact_placeholder_msg" placeholder="Please describe your requirements, quantities, target market, or any questions you have…"></textarea>
+            <div class="form-error-msg" aria-live="polite"></div>
+          </div>
+
+          <button type="submit" class="form-submit">
+            <span data-t="contact_submit">Send Message</span>
+            <span class="submit-icon">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFO SIDE -->
+  <div class="contact-info rv d2">
+    <div class="info-intro">
+      <span class="slbl" data-t="contact_info_lbl">Direct Contact</span>
+      <h2 data-t="contact_info_h2">We're <em>Here</em> to Help</h2>
+      <p data-t="contact_info_desc">Our international sales team is experienced in working with buyers across different time zones and languages. We speak English, Chinese, and can coordinate with Arabic-speaking partners.</p>
+    </div>
+
+    <div class="info-cards">
+      <div class="info-card">
+        <div class="info-card-icon">✉</div>
+        <div class="info-card-body">
+          <div class="info-card-label" data-t="contact_email_lbl">Email</div>
+          <div class="info-card-val">
+            <a href="mailto:sales@yominelectric.com">sales@yominelectric.com</a><br>
+            <a href="mailto:info@yominelectric.com" style="color:var(--dm);font-size:12px;">info@yominelectric.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-icon">💬</div>
+        <div class="info-card-body">
+          <div class="info-card-label" data-t="contact_wa_lbl">WhatsApp</div>
+          <div class="info-card-val">
+            <a href="https://wa.me/8618957734521" target="_blank" rel="noopener" class="phone-link">+86 189 5773 4521</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="info-card">
+        <div class="info-card-icon">☎</div>
+        <div class="info-card-body">
+          <div class="info-card-label">Phone</div>
+          <div class="info-card-val">
+            <a href="tel:+8618957734521" class="phone-link">+86 189 5773 4521</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-icon">📍</div>
+        <div class="info-card-body">
+          <div class="info-card-label" data-t="contact_addr_lbl">Address</div>
+          <div class="info-card-val">
+            No. 88 Industrial Avenue<br>
+            Wenzhou, Zhejiang Province<br>
+            China, 325000
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-icon">🏪</div>
+        <div class="info-card-body">
+          <div class="info-card-label" data-t="contact_store_lbl">Online Stores</div>
+          <div class="info-card-val">
+            <a href="https://alibaba.com" target="_blank">Alibaba</a> &nbsp;·&nbsp;
+            <a href="https://taobao.com" target="_blank">Taobao</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CENTERED HOURS SECTION -->
+<div class="hours-section">
+  <div class="hours-card">
+    <div class="hours-title" data-t="contact_hours_title">Service Hours</div>
+    <div class="hours-row">
+      <span class="hours-day">Monday – Sunday</span>
+      <span class="hours-time" style="color:var(--ac);font-weight:600">24 / 7</span>
+    </div>
+    <div class="hours-row">
+      <span class="hours-day">Response Time</span>
+      <span class="hours-time" style="color:var(--ac);font-weight:600">Within 1 Hour</span>
+    </div>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--bdr)">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <span style="color:#4ade80;font-size:10px">●</span>
+        <span style="font-size:13px;color:var(--tx);font-weight:600">Service Always Available</span>
+      </div>
+      <p style="font-size:12px;color:var(--mt);line-height:1.6;margin:0">Our team is available <strong style="color:var(--ac)">24 hours a day, 7 days a week</strong>. Every inquiry receives a response <strong style="color:var(--ac)">within 1 hour</strong> — day or night.</p>
+    </div>
+
+    <!-- Social / Channel links -->
+    <div class="social-row">
+      <a href="https://wa.me/8618957734521" target="_blank" class="soc-btn soc-circle" aria-label="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.173-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <a href="#" class="soc-btn soc-circle" aria-label="WeChat">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-3.895-6.348-7.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm4.315 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm4.969 4.31c-3.019 0-5.478 2.146-5.478 4.798 0 2.652 2.459 4.798 5.478 4.798.658 0 1.282-.107 1.863-.298a.607.607 0 0 1 .497.068l1.339.782a.228.228 0 0 0 .116.038.207.207 0 0 0 .204-.204.282.282 0 0 0-.034-.148l-.272-1.032a.413.413 0 0 1 .148-.462C18.893 18.993 20 17.52 20 15.9c0-2.652-2.459-4.799-5.478-4.799zm-2.058 2.532c.447 0 .81.37.81.824 0 .456-.363.824-.81.824a.817.817 0 0 1-.811-.824c0-.455.363-.824.81-.824zm4.114 0c.447 0 .81.37.81.824 0 .456-.363.824-.81.824a.817.817 0 0 1-.81-.824c0-.455.362-.824.81-.824z"/></svg>
+      </a>
+      <a href="mailto:sales@yominelectric.com" class="soc-btn soc-circle" aria-label="Email">
+        ✉
+      </a>
+      <a href="https://alibaba.com" target="_blank" class="soc-btn soc-circle" aria-label="Alibaba">
+        🏪
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <span style="font-family:var(--sf);font-size:20px;color:var(--tx);">Yomin Electric</span>
+      <p data-t="ft_desc">Precision energy metering solutions for global buyers. Trusted in 95+ countries since 2005.</p>
+    </div>
+    <div class="ft-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="product.html?category=energy-meter">Energy Meters</a></li>
+        <li><a href="product.html?category=current-transformer">Current Transformers</a></li>
+        <li><a href="product.html?category=voltage-protector">Voltage Protectors</a></li>
+        <li><a href="product.html?category=analog-meter">Analog Meters</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html#factory">Factory</a></li>
+        <li><a href="about.html#certifications">Certifications</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:sales@yominelectric.com">sales@yominelectric.com</a></li>
+        <li><a href="https://wa.me/8618957734521">+86 189 5773 4521</a></li>
+        <li>Wenzhou, Zhejiang, China</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <p data-t="ft_copy">© 2024 Yomin Electric Co., Ltd. All rights reserved.</p>
+    <div class="ft-soc">
+      <a href="https://wa.me/8618957734521" target="_blank" class="ft-soc-btn" aria-label="WhatsApp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.173-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <a href="#" class="ft-soc-btn" aria-label="WeChat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-3.895-6.348-7.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm4.315 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm4.969 4.31c-3.019 0-5.478 2.146-5.478 4.798 0 2.652 2.459 4.798 5.478 4.798.658 0 1.282-.107 1.863-.298a.607.607 0 0 1 .497.068l1.339.782a.228.228 0 0 0 .116.038.207.207 0 0 0 .204-.204.282.282 0 0 0-.034-.148l-.272-1.032a.413.413 0 0 1 .148-.462C18.893 18.993 20 17.52 20 15.9c0-2.652-2.459-4.799-5.478-4.799zm-2.058 2.532c.447 0 .81.37.81.824 0 .456-.363.824-.81.824a.817.817 0 0 1-.811-.824c0-.455.363-.824.81-.824zm4.114 0c.447 0 .81.37.81.824 0 .456-.363.824-.81.824a.817.817 0 0 1-.81-.824c0-.455.362-.824.81-.824z"/></svg>
+      </a>
+      <a href="mailto:sales@yominelectric.com" class="ft-soc-btn" aria-label="Email">✉</a>
+      <a href="https://alibaba.com" target="_blank" class="ft-soc-btn" aria-label="Alibaba">🏪</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/api.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/contact.js"></script>
+<script>
+// Pre-fill subject from URL params (coming from product page)
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const product = params.get('product');
+  if (product) {
+    const sub = document.getElementById('f-subject');
+    if (sub) sub.value = 'Quote Request';
+    const msg = document.getElementById('f-message');
+    if (msg) msg.placeholder = `I would like to request a quote for: ${product}\n\nPlease include:\n- Unit price for quantity: \n- Minimum order quantity: \n- Lead time: \n- Shipping options to: `;
+  }
+  // Remove WeChat data-open-wechat attributes
+  document.querySelectorAll('[data-open-wechat]').forEach(el => {
+    el.removeAttribute('data-open-wechat');
+    el.href = '#';
+    el.style.pointerEvents = 'none';
+    el.style.opacity = '0.6';
+  });
+});
+</script>
+</body>
+</html>

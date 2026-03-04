@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products – Yomin Electric</title>
+  <meta name="description"
+    content="Browse 430 products: energy meters, voltage stabilizers, current transformers and more from Zhejiang Yomin Electric. CE certified, exported to 95+ countries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Noto+Sans+Arabic:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      padding: 0 36px;
+      height: 68px;
+      background: rgba(13, 13, 13, .88);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--bds);
+      transition: background .4s
+    }
+
+    nav.sc {
+      background: rgba(13, 13, 13, .99)
+    }
+
+    body.light nav {
+      background: rgba(248, 247, 244, .92);
+      border-bottom-color: rgba(0, 0, 0, .1)
+    }
+
+    .n-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      flex-shrink: 0
+    }
+
+    .n-logo-fb {
+      font-family: var(--sf);
+      font-size: 17px;
+      color: var(--tx)
+    }
+
+    .n-ctr {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      list-style: none
+    }
+
+    .n-ctr a {
+      text-decoration: none;
+      color: var(--mt);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .3px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: color .2s, background .2s
+    }
+
+    .n-ctr a:hover,
+    .n-ctr a.active {
+      color: var(--ac)
+    }
+
+    .n-rt {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0
+    }
+
+    .lsw {
+      position: relative
+    }
+
+    .lbtn {
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid var(--bdr);
+      color: var(--mt);
+      padding: 7px 13px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: .5px;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--ss)
+    }
+
+    .ncta {
+      background: var(--ac);
+      color: #000;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      text-decoration: none;
+      white-space: nowrap
+    }
+
+    .ham {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px
+    }
+
+    .ham span {
+      width: 22px;
+      height: 1.5px;
+      background: var(--tx);
+      display: block
+    }
+
+    .mob {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(13, 13, 13, .98);
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s
+    }
+
+    .mob.op {
+      opacity: 1;
+      pointer-events: all
+    }
+
+    .mob a {
+      font-family: var(--sf);
+      font-size: 32px;
+      color: var(--tx);
+      text-decoration: none;
+      transition: color .2s
+    }
+
+    .mob-x {
+      position: absolute;
+      top: 22px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: var(--mt);
+      font-size: 26px;
+      cursor: pointer
+    }
+
+    footer {
+      padding: 48px 60px;
+      border-top: 1px solid var(--bds);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px
+    }
+
+    .ft-brand-n {
+      font-family: var(--sf);
+      font-size: 20px;
+      color: var(--tx);
+      margin-bottom: 6px
+    }
+
+    .ft-sub {
+      font-size: 12px;
+      color: var(--dm)
+    }
+
+    .ft-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap
+    }
+
+    .ft-links a {
+      font-size: 13px;
+      color: var(--mt);
+      text-decoration: none;
+      transition: color .2s
+    }
+
+    .ft-links a:hover {
+      color: var(--ac)
+    }
+
+    @media(max-width:768px) {
+      nav {
+        padding: 0 20px
+      }
+
+      .n-ctr,
+      .n-rt .lsw,
+      .n-rt .ncta {
+        display: none
+      }
+
+      .ham {
+        display: flex
+      }
+
+      footer {
+        padding: 32px 24px
+      }
+    }
+
+    /* HERO */
+    .page-hero {
+      padding: 120px 60px 56px;
+      border-bottom: 1px solid var(--bds);
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bgs) 100%);
+      position: relative;
+      overflow: hidden
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(200, 169, 110, .06) 0%, transparent 70%);
+      pointer-events: none
+    }
+
+    .ph-tag {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ac);
+      margin-bottom: 14px;
+      display: block
+    }
+
+    .ph-h1 {
+      font-family: var(--sf);
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1;
+      letter-spacing: -2px;
+      color: var(--tx);
+      margin-bottom: 16px
+    }
+
+    .ph-desc {
+      max-width: 540px;
+      color: var(--mt);
+      font-size: 14.5px;
+      line-height: 1.75
+    }
+
+    .ph-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 32px;
+      flex-wrap: wrap
+    }
+
+    .ph-stat-num {
+      font-family: var(--sf);
+      font-size: 28px;
+      color: var(--ac);
+      letter-spacing: -1px
+    }
+
+    .ph-stat-lbl {
+      font-size: 11px;
+      color: var(--dm);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 2px
+    }
+
+    /* LAYOUT */
+    .shop-wrap {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: 80vh
+    }
+
+    /* SIDEBAR */
+    .cat-sidebar {
+      border-right: 1px solid var(--bds);
+      position: sticky;
+      top: 68px;
+      height: calc(100vh - 68px);
+      overflow-y: auto;
+      padding: 0
+    }
+
+    .cat-sidebar::-webkit-scrollbar {
+      width: 3px
+    }
+
+    .cat-sidebar::-webkit-scrollbar-thumb {
+      background: var(--bds);
+      border-radius: 2px
+    }
+
+    .sb-header {
+      padding: 24px 20px 12px;
+      border-bottom: 1px solid var(--bds)
+    }
+
+    .sb-title {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--dm);
+      font-weight: 700
+    }
+
+    .sb-search-wrap {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--bds);
+      position: relative
+    }
+
+    .sb-search {
+      width: 100%;
+      padding: 9px 12px 9px 36px;
+      background: var(--bgc2);
+      border: 1px solid var(--bds);
+      border-radius: 8px;
+      color: var(--tx);
+      font-size: 12.5px;
+      font-family: var(--ss);
+      outline: none;
+      transition: border-color .2s
+    }
+
+    .sb-search:focus {
+      border-color: rgba(200, 169, 110, .35)
+    }
+
+    .sb-search-ic {
+      position: absolute;
+      left: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--dm);
+      font-size: 13px;
+      pointer-events: none
+    }
+
+    .sb-all {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      font-size: 12.5px;
+      color: var(--mt);
+      cursor: pointer;
+      transition: all .15s;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      font-family: var(--ss);
+      border-left: 2px solid transparent
+    }
+
+    .sb-all:hover,
+    .sb-item:hover {
+      color: var(--tx);
+      background: rgba(255, 255, 255, .03)
+    }
+
+    .sb-all.active,
+    .sb-item.active {
+      color: var(--ac);
+      background: rgba(200, 169, 110, .06);
+      border-left-color: var(--ac)
+    }
+
+    .sb-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 20px;
+      font-size: 12.5px;
+      color: var(--mt);
+      cursor: pointer;
+      transition: all .15s;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      font-family: var(--ss);
+      border-left: 2px solid transparent
+    }
+
+    .sb-item-inner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0
+    }
+
+    .sb-item-icon {
+      font-size: 14px;
+      flex-shrink: 0;
+      opacity: .8
+    }
+
+    .sb-item-label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
+
+    .sb-count {
+      font-size: 10px;
+      color: var(--dm);
+      background: var(--bgc2);
+      padding: 2px 7px;
+      border-radius: 10px;
+      flex-shrink: 0
+    }
+
+    /* PRODUCT AREA */
+    .prod-area {
+      padding: 32px 40px 60px;
+      min-width: 0
+    }
+
+    .prod-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px
+    }
+
+    .prod-area-title {
+      font-family: var(--sf);
+      font-size: 22px;
+      color: var(--tx);
+      letter-spacing: -.4px
+    }
+
+    .prod-meta {
+      font-size: 12px;
+      color: var(--dm);
+      letter-spacing: .5px
+    }
+
+    .sort-wrap {
+      position: relative
+    }
+
+    .sort-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--mt);
+      background: var(--bgc);
+      border: 1px solid var(--bds);
+      padding: 7px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: var(--ss);
+      transition: all .2s
+    }
+
+    .sort-btn:hover {
+      color: var(--tx)
+    }
+
+    .sort-drop {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 6px);
+      background: var(--bgc);
+      border: 1px solid var(--bdr);
+      border-radius: 10px;
+      overflow: hidden;
+      min-width: 160px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-4px);
+      transition: all .2s;
+      z-index: 100;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, .4)
+    }
+
+    .sort-drop.op {
+      opacity: 1;
+      pointer-events: all;
+      transform: none
+    }
+
+    .sort-opt {
+      display: block;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: var(--mt);
+      cursor: pointer;
+      transition: all .15s;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      font-family: var(--ss)
+    }
+
+    .sort-opt:hover {
+      background: rgba(255, 255, 255, .05);
+      color: var(--tx)
+    }
+
+    .sort-opt.act {
+      color: var(--ac)
+    }
+
+    /* GRID */
+    .prod-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px
+    }
+
+    /* CARD */
+    .pcard {
+      background: var(--bgc);
+      border: 1px solid var(--bds);
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform .25s, border-color .25s, box-shadow .25s;
+      cursor: pointer
+    }
+
+    .pcard:hover {
+      transform: translateY(-5px);
+      border-color: rgba(200, 169, 110, .3);
+      box-shadow: 0 20px 56px rgba(0, 0, 0, .35)
+    }
+
+    .pcard-img {
+      aspect-ratio: 1;
+      background: var(--bgc2);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .pcard-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s;
+      display: block
+    }
+
+    .pcard:hover .pcard-img img {
+      transform: scale(1.06)
+    }
+
+    .pcard-img-fb {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bgc2)
+    }
+
+    .pcard-body {
+      padding: 14px 15px 10px;
+      flex: 1;
+      display: flex;
+      flex-direction: column
+    }
+
+    .pcard-cat {
+      font-size: 9.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--dm);
+      margin-bottom: 6px
+    }
+
+    .pcard-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--tx);
+      line-height: 1.4;
+      margin-bottom: 10px;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden
+    }
+
+    .pcard-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 2px
+    }
+
+    .spec-pill {
+      font-size: 10px;
+      color: var(--ac);
+      background: rgba(200, 169, 110, .08);
+      border: 1px solid rgba(200, 169, 110, .15);
+      padding: 2px 8px;
+      border-radius: 20px;
+      white-space: nowrap
+    }
+
+    .pcard-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 15px 12px;
+      margin-top: auto;
+      border-top: 1px solid var(--bds)
+    }
+
+    .pcard-price {
+      font-size: 12.5px;
+      color: var(--ac);
+      font-weight: 600
+    }
+
+    .pcard-arrow {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(200, 169, 110, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ac);
+      font-size: 13px;
+      transition: background .2s, transform .2s
+    }
+
+    .pcard:hover .pcard-arrow {
+      background: rgba(200, 169, 110, .22);
+      transform: translateX(2px)
+    }
+
+    .pcard-active {
+      border-color: rgba(200, 169, 110, .5) !important;
+      box-shadow: 0 0 0 2px rgba(200, 169, 110, .18) !important
+    }
+
+    /* EMPTY / LOAD MORE */
+    .empty-state {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 80px 20px;
+      color: var(--mt)
+    }
+
+    .empty-state h3 {
+      font-family: var(--sf);
+      font-size: 22px;
+      color: var(--tx);
+      margin-bottom: 8px
+    }
+
+    .lm-wrap {
+      text-align: center;
+      padding: 44px 0 0;
+      grid-column: 1/-1
+    }
+
+    #load-more {
+      background: none;
+      border: 1px solid rgba(200, 169, 110, .25);
+      color: var(--ac);
+      padding: 12px 36px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-family: var(--ss);
+      cursor: pointer;
+      transition: all .2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    #load-more:hover {
+      background: rgba(200, 169, 110, .08)
+    }
+
+    /* MOBILE FILTER */
+    .mob-filter {
+      display: none;
+      padding: 12px 16px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--bds);
+      overflow-x: auto;
+      gap: 6px
+    }
+
+    .mob-filter.show {
+      display: flex
+    }
+
+    .mfbtn {
+      background: var(--bgc);
+      border: 1px solid var(--bds);
+      color: var(--mt);
+      padding: 7px 13px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all .2s;
+      font-family: var(--ss);
+      flex-shrink: 0
+    }
+
+    .mfbtn.active {
+      background: rgba(200, 169, 110, .1);
+      border-color: rgba(200, 169, 110, .35);
+      color: var(--ac)
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:960px) {
+      .shop-wrap {
+        grid-template-columns: 1fr
+      }
+
+      .cat-sidebar {
+        display: none
+      }
+
+      .mob-filter {
+        display: flex
+      }
+
+      .prod-area {
+        padding: 24px 16px 48px
+      }
+
+      .prod-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px
+      }
+    }
+
+    @media(max-width:768px) {
+      .page-hero {
+        padding: 90px 20px 40px
+      }
+
+      .ph-stats {
+        gap: 20px
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
+   PRODUCT DETAIL — FULL-SCREEN BLUR OVERLAY MODAL
+═══════════════════════════════════════════════════ */
+    #product-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #product-overlay::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 5, 5, .75);
+      backdrop-filter: blur(22px) saturate(0.6);
+      -webkit-backdrop-filter: blur(22px) saturate(0.6);
+      z-index: 0;
+    }
+
+    .overlay-inner {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 48px 24px 64px;
+    }
+
+    .modal-card {
+      background: var(--bgc);
+      border: 1px solid rgba(200, 169, 110, .22);
+      border-radius: 22px;
+      width: 100%;
+      max-width: 1060px;
+      box-shadow: 0 48px 120px rgba(0, 0, 0, .7), 0 0 0 1px rgba(200, 169, 110, .08);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(32px) scale(.97);
+      transition: opacity .38s cubic-bezier(.25, .46, .45, .94), transform .38s cubic-bezier(.25, .46, .45, .94);
+    }
+
+    #product-overlay.ov-vis .modal-card {
+      opacity: 1;
+      transform: none
+    }
+
+    .modal-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, rgba(200, 169, 110, 0) 0%, #c8a96e 45%, rgba(200, 169, 110, .5) 100%);
+      z-index: 2;
+    }
+
+    /* Close */
+    .mc-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--bds);
+      background: var(--bgc2);
+      color: var(--mt);
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .22s;
+      z-index: 10;
+      font-family: var(--ss);
+      line-height: 1;
+    }
+
+    .mc-close:hover {
+      border-color: rgba(200, 169, 110, .5);
+      color: var(--ac);
+      background: rgba(200, 169, 110, .1);
+      transform: rotate(90deg)
+    }
+
+    /* Body */
+    .mc-body {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 0;
+      min-height: 500px
+    }
+
+    /* Left */
+    .mc-left {
+      padding: 40px 32px;
+      border-right: 1px solid var(--bds);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: var(--bgc2);
+    }
+
+    .mc-img {
+      aspect-ratio: 1;
+      border-radius: 14px;
+      background: var(--bgc);
+      border: 1px solid var(--bds);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mc-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform .4s
+    }
+
+    .mc-img:hover img {
+      transform: scale(1.04)
+    }
+
+    .mc-img-fb {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .mc-price-box {
+      background: var(--bgc);
+      border: 1px solid var(--bds);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .mc-price-lbl {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--dm)
+    }
+
+    .mc-price {
+      font-family: var(--sf);
+      font-size: 28px;
+      color: var(--ac);
+      letter-spacing: -.5px;
+      line-height: 1
+    }
+
+    .mc-price-sub {
+      font-size: 11px;
+      color: var(--dm)
+    }
+
+    .mc-quote-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--ac);
+      color: #000;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      letter-spacing: .3px;
+      transition: opacity .2s, transform .2s;
+    }
+
+    .mc-quote-btn:hover {
+      opacity: .88;
+      transform: translateY(-1px)
+    }
+
+    .mc-meta-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .mc-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px
+    }
+
+    .mc-meta-key {
+      color: var(--dm)
+    }
+
+    .mc-meta-val {
+      color: var(--mt);
+      font-weight: 500;
+      text-align: right
+    }
+
+    /* Right */
+    .mc-right {
+      padding: 40px 44px 44px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto
+    }
+
+    .mc-cat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ac);
+      background: rgba(200, 169, 110, .1);
+      border: 1px solid rgba(200, 169, 110, .2);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+
+    .mc-title {
+      font-family: var(--sf);
+      font-size: clamp(18px, 2.2vw, 26px);
+      color: var(--tx);
+      line-height: 1.25;
+      letter-spacing: -.4px;
+      margin-bottom: 14px
+    }
+
+    .mc-desc {
+      font-size: 13.5px;
+      color: var(--mt);
+      line-height: 1.8;
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--bds)
+    }
+
+    .mc-section-label {
+      font-size: 9.5px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--dm);
+      font-weight: 700;
+      margin-bottom: 14px;
+      margin-top: 24px
+    }
+
+    /* Specs */
+    .mc-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--bds);
+      border: 1px solid var(--bds);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 4px
+    }
+
+    .mc-spec {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding: 11px 15px;
+      background: var(--bgc2);
+      transition: background .15s
+    }
+
+    .mc-spec:hover {
+      background: rgba(200, 169, 110, .04)
+    }
+
+    .mc-spec-k {
+      font-size: 9.5px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--dm)
+    }
+
+    .mc-spec-v {
+      font-size: 13px;
+      color: var(--tx);
+      font-weight: 500
+    }
+
+    /* Apps */
+    .mc-apps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px
+    }
+
+    .mc-app {
+      font-size: 11.5px;
+      color: var(--mt);
+      background: var(--bgc2);
+      border: 1px solid var(--bds);
+      padding: 5px 13px;
+      border-radius: 20px;
+      transition: all .15s
+    }
+
+    .mc-app:hover {
+      border-color: rgba(200, 169, 110, .3);
+      color: var(--ac)
+    }
+
+    /* Responsive */
+    @media(max-width:800px) {
+      .mc-body {
+        grid-template-columns: 1fr
+      }
+
+      .mc-left {
+        border-right: none;
+        border-bottom: 1px solid var(--bds);
+        padding: 28px 24px
+      }
+
+      .mc-img {
+        max-width: 280px;
+        margin: 0 auto
+      }
+
+      .mc-right {
+        padding: 28px 24px
+      }
+
+      .mc-specs {
+        grid-template-columns: 1fr
+      }
+
+      .overlay-inner {
+        padding: 20px 12px 40px
+      }
+
+      .mc-close {
+        top: 12px;
+        right: 12px
+      }
+    }
+
+    /* ─── RTL ─── */
+    [dir="rtl"] nav,
+    [dir="rtl"] .n-logo,
+    [dir="rtl"] .n-ctr,
+    [dir="rtl"] .n-rt {
+      direction: ltr
+    }
+
+    [dir="rtl"] .cat-sidebar {
+      border-right: none;
+      border-left: 1px solid var(--bds)
+    }
+
+    [dir="rtl"] .sb-all,
+    [dir="rtl"] .sb-item {
+      text-align: right;
+      border-left: none;
+      border-right: 2px solid transparent
+    }
+
+    [dir="rtl"] .sb-all.active,
+    [dir="rtl"] .sb-item.active {
+      border-right-color: var(--ac);
+      border-left-color: transparent
+    }
+
+    [dir="rtl"] .page-hero,
+    [dir="rtl"] .ph-desc,
+    [dir="rtl"] .ph-tag,
+    [dir="rtl"] .ph-h1 {
+      direction: rtl;
+      text-align: right
+    }
+
+    [dir="rtl"] .prod-area-title,
+    [dir="rtl"] .prod-meta {
+      direction: rtl;
+      text-align: right
+    }
+
+    [dir="rtl"] .pcard-body,
+    [dir="rtl"] .pcard-cat,
+    [dir="rtl"] .pcard-name {
+      direction: rtl;
+      text-align: right
+    }
+
+    [dir="rtl"] .mc-right {
+      direction: rtl;
+      text-align: right
+    }
+
+    [dir="rtl"] .mc-desc,
+    [dir="rtl"] .mc-title,
+    [dir="rtl"] .mc-cat-badge,
+    [dir="rtl"] .mc-section-label {
+      direction: rtl;
+      text-align: right
+    }
+
+    [dir="rtl"] footer {
+      direction: ltr
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cur"></div>
+  <div class="cur-r"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="n-logo">
+      <img src="http://www.yominelectric.com/images/logo.png" alt="Yomin Electric"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="n-logo-fb" style="display:none">Yomin Electric</span>
+    </a>
+    <ul class="n-ctr">
+      <li><a href="index.html" data-t="nav_home">Home</a></li>
+      <li><a href="product.html" class="active" data-t="nav_products">Products</a></li>
+      <li><a href="solutions.html" data-t="nav_solutions">Solutions</a></li>
+      <li><a href="process.html" data-t="nav_process">Process</a></li>
+      <li><a href="about.html" data-t="nav_about">About</a></li>
+      <li><a href="contact.html" data-t="nav_contact">Contact</a></li>
+    </ul>
+    <div class="n-rt">
+      <div class="lsw">
+        <button class="lbtn">
+          <svg viewBox="0 0 16 16" fill="currentColor" width="11" height="11">
+            <path
+              d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1.6 8.8h2.07a12.67 12.67 0 0 0 .94 3.53A6.42 6.42 0 0 1 1.6 8.8zm0-1.6a6.42 6.42 0 0 1 3.01-3.53A12.67 12.67 0 0 0 3.67 7.2H1.6zm8.73 4.73a12.67 12.67 0 0 0 .94-3.53h2.07a6.42 6.42 0 0 1-3.01 3.53zm-1.87.46c-.7-.62-1.28-1.8-1.6-3.19h3.2c-.32 1.39-.9 2.57-1.6 3.19zm0-9.38c.7.62 1.28 1.8 1.6 3.19h-3.2c.32-1.39.9-2.57 1.6-3.19zm2.81 3.19a12.67 12.67 0 0 0-.94-3.53 6.42 6.42 0 0 1 3.01 3.53h-2.07zm-5.54-3.53A12.67 12.67 0 0 0 4.8 7.2H2.73a6.42 6.42 0 0 1 3.01-3.53zM4.8 8.8a12.67 12.67 0 0 0 .94 3.53A6.42 6.42 0 0 1 2.73 8.8H4.8zm6.4 0h2.07a6.42 6.42 0 0 1-3.01 3.53A12.67 12.67 0 0 0 11.2 8.8zm0-1.6a12.67 12.67 0 0 0-.94-3.53 6.42 6.42 0 0 1 3.01 3.53H11.2z" />
+          </svg>
+          <span id="lbtn-txt">EN</span>
+        </button>
+        <div class="ldrop" id="ldrop">
+          <button class="lopt" data-lang="en">🇺🇸 English</button>
+          <button class="lopt" data-lang="fr">🇫🇷 Français</button>
+          <button class="lopt" data-lang="ar">🇸🇦 العربية</button>
+        </div>
+      </div>
+      <a href="contact.html" class="ncta" data-t="nav_cta">Get Quote</a>
+      <button class="ham" id="ham"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mob" id="mob">
+    <button class="mob-x" id="mob-x">✕</button>
+    <a href="index.html">Home</a>
+    <a href="product.html" class="active">Products</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="process.html">Process</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <div class="mob-lngs">
+      <button class="mlb" data-lang="en">EN</button>
+      <button class="mlb" data-lang="fr">FR</button>
+      <button class="mlb" data-lang="ar">AR</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <span class="ph-tag" data-t="prod_browse_cat">Product Catalog</span>
+    <h1 class="ph-h1" data-t="prod_all">All Products</h1>
+    <p class="ph-desc" data-t="prod_desc">Browse our complete range of energy meters, voltage stabilizers, current
+      transformers, and accessories. CE certified. Trusted by buyers in 95+ countries.</p>
+    <div class="ph-stats">
+      <div class="ph-stat">
+        <div class="ph-stat-num">430</div>
+        <div class="ph-stat-lbl">Products</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-stat-num">13</div>
+        <div class="ph-stat-lbl">Categories</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-stat-num">95+</div>
+        <div class="ph-stat-lbl">Countries</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-stat-num">28yr</div>
+        <div class="ph-stat-lbl">Experience</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE FILTER -->
+  <div class="mob-filter show" id="mob-filter"></div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="shop-wrap">
+    <aside class="cat-sidebar">
+      <div class="sb-header"><span class="sb-title" data-t="prod_browse_cat">Browse by Category</span></div>
+      <div class="sb-search-wrap">
+        <span class="sb-search-ic">🔍</span>
+        <input class="sb-search" id="sb-search" type="search" placeholder="Search products…" data-t="prod_search">
+      </div>
+      <div id="sb-list"></div>
+    </aside>
+    <div class="prod-area">
+      <div class="prod-toolbar">
+        <div>
+          <div class="prod-area-title" id="area-title" data-t="prod_all">All Products</div>
+          <div class="prod-meta" id="area-meta">Loading…</div>
+        </div>
+        <div class="sort-wrap">
+          <button class="sort-btn" id="sort-btn" data-t="prod_sort">Sort <svg width="10" height="10" viewBox="0 0 10 10"
+              fill="currentColor">
+              <path d="M5 7L1 3h8z" />
+            </svg></button>
+          <div class="sort-drop" id="sort-drop">
+            <button class="sort-opt act" data-sort="default" data-t="prod_default">Default</button>
+            <button class="sort-opt" data-sort="price-asc" data-t="prod_price_asc">Price: Low to High</button>
+            <button class="sort-opt" data-sort="price-desc" data-t="prod_price_desc">Price: High to Low</button>
+            <button class="sort-opt" data-sort="az" data-t="prod_az">Name: A–Z</button>
+            <button class="sort-opt" data-sort="za" data-t="prod_za">Name: Z–A</button>
+          </div>
+        </div>
+      </div>
+      <div class="prod-grid" id="prod-grid"></div>
+      <div class="lm-wrap"><button id="load-more" style="display:none" data-t="prod_load_more">Load More</button></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="ft-brand-n">Yomin Electric</div>
+      <div class="ft-sub">Zhejiang Yomin Electric Co., Ltd. · Precision Energy Metering Solutions</div>
+    </div>
+    <div class="ft-links">
+      <a href="index.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Float buttons -->
+  <div class="float-btns">
+    <button class="float-btn float-btn-wc" id="wc-btn">
+      <span class="float-btn-label">WeChat</span>
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="white"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-3.895-6.348-7.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm4.315 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm4.969 4.31c-3.019 0-5.478 2.146-5.478 4.798 0 2.652 2.459 4.798 5.478 4.798.658 0 1.282-.107 1.863-.298a.607.607 0 0 1 .497.068l1.339.782a.228.228 0 0 0 .116.038.207.207 0 0 0 .204-.204.282.282 0 0 0-.034-.148l-.272-1.032a.413.413 0 0 1 .148-.462C18.893 18.993 20 17.52 20 15.9c0-2.652-2.459-4.799-5.478-4.799zm-2.058 2.532c.447 0 .81.37.81.824 0 .456-.363.824-.81.824a.817.817 0 0 1-.811-.824c0-.455.363-.824.81-.824zm4.114 0c.447 0 .81.37.81.824 0 .456-.363.824-.81.824a.817.817 0 0 1-.81-.824c0-.455.362-.824.81-.824z"/></svg>
+    </button>
+    <a class="float-btn float-btn-wa" href="https://wa.me/8618888888888" target="_blank">
+      <span class="float-btn-label">WhatsApp</span>
+      <svg viewBox="0 0 24 24" fill="white" width="26" height="26">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        <path
+          d="M12 0C5.373 0 0 5.373 0 12c0 2.134.558 4.133 1.532 5.868L.057 23.486l5.783-1.517A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.866 0-3.61-.487-5.124-1.337l-.366-.217-3.435.9.917-3.347-.238-.386A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- WeChat Modal -->
+  <div class="wc-modal-overlay" id="wc-overlay">
+    <div class="wc-modal">
+      <div class="wc-modal-icon" style="font-size:36px">💬</div>
+      <div class="wc-modal-title">Connect on WeChat</div>
+      <div class="wc-modal-sub">Scan the QR code with WeChat to reach our sales team directly.</div>
+      <div class="wc-qr-wrap"><img class="wc-qr-img" src="assets/img/wechat-qr.png"
+          onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=yominelectric'"
+          alt="WeChat QR"></div>
+      <button class="wc-modal-close" id="wc-close">✕ &nbsp;Close</button>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAIL BLUR OVERLAY (z-index 500, fixed, full-screen) -->
+  <div id="product-overlay">
+    <div class="overlay-inner">
+      <div class="modal-card" id="modal-card">
+        <button class="mc-close" id="mc-close" aria-label="Close">✕</button>
+        <div class="mc-body" id="mc-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    'use strict';
+    const CATS = [
+      { id: 'Energy Meter', label: 'Energy Meters', icon: '⚡', tkey: 'prod_cat_energy_meter' },
+      { id: 'Voltage Stabilizer/Regulator', label: 'Voltage Stabilizers', icon: '🔄', tkey: 'prod_cat_voltage_stabilizer' },
+      { id: 'Current Transformer', label: 'Current Transformers', icon: '🔵', tkey: 'prod_cat_current_transformer' },
+      { id: 'Variac/Transformer', label: 'Variac / Transformers', icon: '🔃', tkey: 'prod_cat_variac' },
+      { id: 'Terminal & Connector', label: 'Terminals & Connectors', icon: '🔩', tkey: 'prod_cat_terminal' },
+      { id: 'Solar/PV Products', label: 'Solar & PV', icon: '☀️', tkey: 'prod_cat_solar' },
+      { id: 'Fuse & Protection', label: 'Fuses & Protection', icon: '⚠️', tkey: 'prod_cat_fuse' },
+      { id: 'Voltage Protector', label: 'Voltage Protectors', icon: '🛡️', tkey: 'prod_cat_voltage_protector' },
+      { id: 'Socket & Wiring', label: 'Sockets & Wiring', icon: '🔌', tkey: 'prod_cat_socket' },
+      { id: 'Tile Leveling System', label: 'Tile Leveling', icon: '🧱', tkey: 'prod_cat_tile' },
+      { id: 'Tools & Hardware', label: 'Tools & Hardware', icon: '🔧', tkey: 'prod_cat_tools' },
+      { id: 'Security Seal', label: 'Security Seals', icon: '🔒', tkey: 'prod_cat_seal' },
+      { id: 'Other', label: 'Other Products', icon: '📦', tkey: 'prod_cat_other' },
+    ];
+    function getCatLabel(c) {
+      if (typeof T !== 'undefined' && typeof currentLang !== 'undefined') {
+        const tr = T[currentLang];
+        if (tr && tr[c.tkey]) return tr[c.tkey];
+      }
+      return c.label;
+    }
+    const CAT_APPS = {
+      'Energy Meter': ['Residential Buildings', 'Commercial Premises', 'Industrial Panels', 'Sub-metering', 'Solar Grid-tie', 'Smart Grid AMI'],
+      'Voltage Stabilizer/Regulator': ['Household Appliances', 'Medical Equipment', 'CNC Machines', 'HVAC Systems', 'Data Centers', 'Sensitive Electronics'],
+      'Variac/Transformer': ['Lab & Testing', 'Voltage Adjustment', 'Motor Speed Control', 'Audio Equipment', 'R&D Applications', 'Industrial Testing'],
+      'Current Transformer': ['LV Panel Metering', 'Protection Relays', 'Revenue Metering', 'Energy Audits', 'Sub-metering', 'SCADA Integration'],
+      'Terminal & Connector': ['Panel Wiring', 'Control Cabinets', 'DIN Rail Systems', 'Cable Management', 'Industrial Installations', 'Switchboards'],
+      'Fuse & Protection': ['Overcurrent Protection', 'Solar PV Systems', 'Distribution Boards', 'Industrial Safety', 'LV Networks', 'Panel Protection'],
+      'Solar/PV Products': ['Solar Arrays', 'Grid-tie Systems', 'Off-grid Power', 'PV Combiner Boxes', 'Renewable Energy', 'EV Charging'],
+      'Tile Leveling System': ['Floor Tile Installation', 'Wall Tiling', 'Ceramic Tiles', 'Porcelain Tiles', 'Construction Projects', 'Professional Use'],
+      'Voltage Protector': ['Household Appliances', 'Refrigerators & ACs', 'Small Business', 'Surge Protection', 'Motor Protection', 'Phase Protection'],
+      'Socket & Wiring': ['Smart Homes', 'Office Automation', 'Kitchen Appliances', 'EV Charging', 'Commercial Spaces', 'App Control'],
+      'Tools & Hardware': ['Industrial Control', 'Machine Tool', 'Isolation Power', 'Factory Equipment', 'Control Panels', 'OEM Projects'],
+      'Security Seal': ['Meter Sealing', 'Revenue Protection', 'Anti-tampering', 'Utility Metering', 'Smart Grid', 'Compliance'],
+      'Other': ['Industrial Use', 'Commercial Buildings', 'Export Ready', 'OEM Available', 'CE Certified', 'ISO9001'],
+    };
+
+    let ALL = [], FILTERED = [], activeFilter = 'all', searchQuery = '', sortMode = 'default', shown = 60;
+    const PAGE = 60;
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      /* ── Load products.json ── */
+      try {
+        const r = await fetch('data/products.json');
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        const raw = await r.json();
+        /* Normalize: support both old format (title/category/specs/image)
+           and new format (product_title/product_category/key_specifications/main_image_url) */
+        ALL = raw.map((p, i) => ({
+          id: p.id || (('ym-' + String(i + 1).padStart(4, '0'))),
+          title: p.title || p.product_title || p.name || '',
+          category: p.category || p.product_category || 'Other',
+          price: p.price || '',
+          description: p.description || p.short_description || '',
+          specs: p.specs || p.key_specifications || {},
+          image: ((p.image || p.main_image_url || p.img || '')).replace(/via\.placeholder\.com[^\s]*/g, ''),
+          url: p.url || p.product_url || '',
+        }));
+      } catch (e) {
+        console.error('Load failed:', e);
+        const g = document.getElementById('prod-grid');
+        if (g) g.innerHTML = '<div class="empty-state"><div style="font-size:40px;opacity:.3;margin-bottom:16px">⚠️</div><h3>Could not load products</h3><p>Ensure data/products.json is present and accessible.</p></div>';
+        document.getElementById('area-meta').textContent = 'Load error';
+        return;
+      }
+
+      const params = new URLSearchParams(location.search);
+      const urlCat = params.get('cat') || params.get('category');
+      if (urlCat && urlCat !== 'all') activeFilter = decodeURIComponent(urlCat);
+
+      buildSidebar(); buildMobileFilter(); initSbSearch(); initSort(); initLoadMore();
+      applyAndRender();
+
+      /* Rebuild sidebar/mobile filter when language changes */
+      new MutationObserver(() => { buildSidebar(); buildMobileFilter(); setFilter(activeFilter); }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+      const urlId = params.get('id');
+      if (urlId) { const p = ALL.find(x => x.id === urlId); if (p) setTimeout(() => openOverlay(p), 400); }
+
+      /* Nav scroll */
+      window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('sc', scrollY > 20), { passive: true });
+
+      /* WeChat */
+      document.getElementById('wc-btn')?.addEventListener('click', () => document.getElementById('wc-overlay').classList.add('op'));
+      document.getElementById('wc-close')?.addEventListener('click', () => document.getElementById('wc-overlay').classList.remove('op'));
+      document.getElementById('wc-overlay')?.addEventListener('click', e => { if (e.target === e.currentTarget) e.currentTarget.classList.remove('op'); });
+
+      /* Mobile nav */
+      const ham = document.getElementById('ham'), mob = document.getElementById('mob'), mobx = document.getElementById('mob-x');
+      ham?.addEventListener('click', () => mob.classList.add('op'));
+      mobx?.addEventListener('click', () => mob.classList.remove('op'));
+
+      /* Overlay close on backdrop */
+      document.getElementById('product-overlay').addEventListener('click', e => {
+        if (e.target === document.getElementById('product-overlay') || e.target.classList.contains('overlay-inner')) closeOverlay();
+      });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
+    });
+
+    /* ── SIDEBAR ── */
+    function buildSidebar() {
+      const list = document.getElementById('sb-list'); if (!list) return;
+      const counts = {};
+      ALL.forEach(p => { counts[p.category] = (counts[p.category] || 0) + 1; });
+      const allLabel = (typeof T !== 'undefined' && typeof currentLang !== 'undefined' && T[currentLang] && T[currentLang].prod_all) ? T[currentLang].prod_all : 'All Products';
+      let html = `<button class="sb-all ${activeFilter === 'all' ? 'active' : ''}" data-filter="all">
+    <span style="display:flex;align-items:center;gap:8px"><span style="font-size:14px">🗂</span>${esc(allLabel)}</span>
+    <span class="sb-count">${ALL.length}</span></button>`;
+      CATS.forEach(c => {
+        const n = counts[c.id] || 0; if (!n) return;
+        html += `<button class="sb-item ${activeFilter === c.id ? 'active' : ''}" data-filter="${esc(c.id)}">
+      <span class="sb-item-inner"><span class="sb-item-icon">${c.icon}</span><span class="sb-item-label">${esc(getCatLabel(c))}</span></span>
+      <span class="sb-count">${n}</span></button>`;
+      });
+      list.innerHTML = html;
+      list.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', () => setFilter(b.dataset.filter)));
+    }
+
+    function buildMobileFilter() {
+      const bar = document.getElementById('mob-filter'); if (!bar) return;
+      const counts = {};
+      ALL.forEach(p => { counts[p.category] = (counts[p.category] || 0) + 1; });
+      const allLabel = (typeof T !== 'undefined' && typeof currentLang !== 'undefined' && T[currentLang] && T[currentLang].prod_all) ? T[currentLang].prod_all : 'All';
+      let html = `<button class="mfbtn ${activeFilter === 'all' ? 'active' : ''}" data-filter="all">${esc(allLabel)} (${ALL.length})</button>`;
+      CATS.forEach(c => {
+        const n = counts[c.id] || 0; if (!n) return;
+        html += `<button class="mfbtn ${activeFilter === c.id ? 'active' : ''}" data-filter="${esc(c.id)}">${c.icon} ${esc(getCatLabel(c))} (${n})</button>`;
+      });
+      bar.innerHTML = html;
+      bar.querySelectorAll('.mfbtn').forEach(b => b.addEventListener('click', () => setFilter(b.dataset.filter)));
+    }
+
+    function setFilter(val) {
+      activeFilter = val; searchQuery = '';
+      const sb = document.getElementById('sb-search'); if (sb) sb.value = '';
+      document.querySelectorAll('.sb-item,.sb-all').forEach(b => b.classList.toggle('active', b.dataset.filter === val));
+      document.querySelectorAll('.mfbtn').forEach(b => b.classList.toggle('active', b.dataset.filter === val));
+      const t = document.getElementById('area-title');
+      if (t) { if (val === 'all') { const allLabel = (typeof T !== 'undefined' && typeof currentLang !== 'undefined' && T[currentLang] && T[currentLang].prod_all) ? T[currentLang].prod_all : 'All Products'; t.textContent = allLabel; } else { const c = CATS.find(c => c.id === val); t.textContent = c ? getCatLabel(c) : val; } }
+      shown = PAGE; applyAndRender();
+    }
+
+    function initSbSearch() {
+      const sb = document.getElementById('sb-search'); if (!sb) return;
+      sb.addEventListener('input', e => { searchQuery = e.target.value.trim().toLowerCase(); shown = PAGE; applyAndRender(); });
+    }
+
+    /* ── SORT ── */
+    function initSort() {
+      const btn = document.getElementById('sort-btn'), drop = document.getElementById('sort-drop');
+      if (!btn || !drop) return;
+      btn.addEventListener('click', e => { e.stopPropagation(); drop.classList.toggle('op'); });
+      document.addEventListener('click', () => drop.classList.remove('op'));
+      drop.querySelectorAll('.sort-opt').forEach(opt => opt.addEventListener('click', () => {
+        sortMode = opt.dataset.sort;
+        drop.querySelectorAll('.sort-opt').forEach(o => o.classList.remove('act')); opt.classList.add('act');
+        drop.classList.remove('op'); shown = PAGE; applyAndRender();
+      }));
+    }
+
+    /* ── LOAD MORE ── */
+    function initLoadMore() {
+      const btn = document.getElementById('load-more'); if (!btn) return;
+      btn.addEventListener('click', () => {
+        shown = Math.min(shown + PAGE, FILTERED.length);
+        renderGrid(false); updateMeta(); updateLoadMore();
+      });
+    }
+
+    /* ── FILTER + RENDER ── */
+    function applyAndRender() {
+      FILTERED = activeFilter === 'all' ? [...ALL] : ALL.filter(p => p.category === activeFilter);
+      if (searchQuery) {
+        const q = searchQuery;
+        FILTERED = FILTERED.filter(p =>
+          p.title.toLowerCase().includes(q) ||
+          (p.description || '').toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q) ||
+          Object.values(p.specs || {}).some(v => String(v).toLowerCase().includes(q))
+        );
+      }
+      if (sortMode === 'az') FILTERED.sort((a, b) => a.title.localeCompare(b.title));
+      else if (sortMode === 'za') FILTERED.sort((a, b) => b.title.localeCompare(a.title));
+      else if (sortMode === 'price-asc') FILTERED.sort((a, b) => priceMin(a.price) - priceMin(b.price));
+      else if (sortMode === 'price-desc') FILTERED.sort((a, b) => priceMin(b.price) - priceMin(a.price));
+      shown = PAGE; renderGrid(true); updateMeta(); updateLoadMore();
+    }
+
+    function priceMin(s) { if (!s) return 9999; const m = String(s).match(/[\d.]+/); return m ? parseFloat(m[0]) : 9999; }
+
+    /* ── GRID ── */
+    function renderGrid(animate) {
+      const grid = document.getElementById('prod-grid'); if (!grid) return;
+      const slice = FILTERED.slice(0, shown);
+      if (!slice.length) {
+        grid.innerHTML = '<div class="empty-state"><div style="font-size:40px;opacity:.3;margin-bottom:16px">🔍</div><h3>No products found</h3><p>Try a different search or category.</p></div>';
+        return;
+      }
+      grid.innerHTML = slice.map(p => productCard(p)).join('');
+      grid.querySelectorAll('.pcard').forEach(card => {
+        card.addEventListener('click', e => {
+          e.preventDefault();
+          const p = ALL.find(x => x.id === card.dataset.id);
+          if (p) openOverlay(p);
+        });
+      });
+      if (animate) {
+        grid.querySelectorAll('.pcard').forEach((el, i) => {
+          el.style.opacity = '0'; el.style.transform = 'translateY(16px)';
+          requestAnimationFrame(() => setTimeout(() => {
+            el.style.transition = 'opacity .3s ease,transform .3s ease,border-color .25s,box-shadow .25s';
+            el.style.opacity = '1'; el.style.transform = 'translateY(0)';
+          }, Math.min(i * 18, 500)));
+        });
+      }
+    }
+
+    function productCard(p) {
+      const specs = p.specs || {};
+      const pills = Object.entries(specs).slice(0, 3).map(([k, v]) => `<span class="spec-pill">${esc(String(v))}</span>`).join('');
+      const imgHtml = p.image
+        ? `<img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="pcard-img-fb" style="display:none">${catSvg(p.category)}</div>`
+        : `<div class="pcard-img-fb">${catSvg(p.category)}</div>`;
+      return `<a class="pcard" href="#" data-id="${esc(p.id)}" title="${esc(p.title)}">
+    <div class="pcard-img">${imgHtml}</div>
+    <div class="pcard-body">
+      <div class="pcard-cat">${esc(p.category)}</div>
+      <div class="pcard-name">${esc(p.title)}</div>
+      ${pills ? `<div class="pcard-specs">${pills}</div>` : ''}
+    </div>
+    <div class="pcard-foot">
+      <span class="pcard-price">${p.price ? esc(p.price) : 'Get Quote'}</span>
+      <span class="pcard-arrow">→</span>
+    </div>
+  </a>`;
+    }
+
+    function updateMeta() {
+      const el = document.getElementById('area-meta'); if (!el) return;
+      el.textContent = `Showing ${Math.min(shown, FILTERED.length)} of ${FILTERED.length} product${FILTERED.length !== 1 ? 's' : ''}`;
+    }
+    function updateLoadMore() {
+      const btn = document.getElementById('load-more'); if (!btn) return;
+      const rem = FILTERED.length - shown;
+      if (rem <= 0) { btn.style.display = 'none'; return; }
+      btn.style.display = 'inline-flex';
+      btn.textContent = `Load ${Math.min(rem, PAGE)} More`;
+    }
+
+    /* ══════════════════════════════════════════════
+       BLUR OVERLAY — open / close
+    ══════════════════════════════════════════════ */
+    function openOverlay(p) {
+      const overlay = document.getElementById('product-overlay');
+      const body = document.getElementById('mc-body');
+      if (!overlay || !body) return;
+
+      const specs = p.specs || {};
+      const apps = CAT_APPS[p.category] || CAT_APPS['Other'];
+      const catCfg = CATS.find(c => c.id === p.category);
+      const catIcon = catCfg ? catCfg.icon : '📦';
+      const appIcons = ['🏠', '🏪', '⚡', '🏭', '🌐', '🔌', '📡', '🔧'];
+
+      /* Image HTML */
+      const imgHtml = p.image
+        ? `<img src="${esc(p.image)}" alt="${esc(p.title)}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="mc-img-fb" style="display:none">${catSvg(p.category, 90)}</div>`
+        : `<div class="mc-img-fb">${catSvg(p.category, 90)}</div>`;
+
+      /* Spec rows */
+      const SPEC_ORDER = ['Phase', 'Voltage', 'Communication', 'Display', 'Control Type', 'Capacity', 'Frequency', 'Current Type', 'Power'];
+      const specRows = SPEC_ORDER.filter(k => specs[k]).map(k =>
+        `<div class="mc-spec"><span class="mc-spec-k">${esc(k)}</span><span class="mc-spec-v">${esc(specs[k])}</span></div>`
+      ).join('');
+      const extraRows = `
+    <div class="mc-spec"><span class="mc-spec-k">Certification</span><span class="mc-spec-v">CE, ISO 9001</span></div>
+    <div class="mc-spec"><span class="mc-spec-k">Warranty</span><span class="mc-spec-v">2 Years</span></div>
+    <div class="mc-spec"><span class="mc-spec-k">Lead Time</span><span class="mc-spec-v">15–25 days</span></div>
+    <div class="mc-spec"><span class="mc-spec-k">Min. Order</span><span class="mc-spec-v">100 units</span></div>
+    <div class="mc-spec"><span class="mc-spec-k">Origin</span><span class="mc-spec-v">Zhejiang, China</span></div>`;
+
+      const desc = p.description || buildAutoDesc(p);
+
+      body.innerHTML = `
+    <div class="mc-left">
+      <div class="mc-img">${imgHtml}</div>
+      <div class="mc-price-box">
+        <div>
+          <div class="mc-price-lbl">FOB Price</div>
+          <div class="mc-price">${p.price ? esc(p.price) : 'Contact Us'}</div>
+          ${p.price ? '<div class="mc-price-sub">Min. order: 100 units</div>' : ''}
+        </div>
+        <a class="mc-quote-btn" href="contact.html?product=${encodeURIComponent(p.title)}">📩 Request Quote</a>
+      </div>
+      <div class="mc-meta-rows">
+        <div class="mc-meta-row"><span class="mc-meta-key">Category</span><span class="mc-meta-val">${esc(p.category)}</span></div>
+        <div class="mc-meta-row"><span class="mc-meta-key">Certifications</span><span class="mc-meta-val">CE, ISO 9001</span></div>
+        <div class="mc-meta-row"><span class="mc-meta-key">Warranty</span><span class="mc-meta-val">2 Years</span></div>
+        <div class="mc-meta-row"><span class="mc-meta-key">Lead Time</span><span class="mc-meta-val">15–25 days</span></div>
+        <div class="mc-meta-row"><span class="mc-meta-key">Shipping</span><span class="mc-meta-val">Shanghai / Ningbo</span></div>
+      </div>
+    </div>
+    <div class="mc-right">
+      <div class="mc-cat-badge">${catIcon} ${esc(p.category)}</div>
+      <h2 class="mc-title">${esc(p.title)}</h2>
+      <p class="mc-desc">${esc(desc)}</p>
+      <div class="mc-section-label">Specifications</div>
+      <div class="mc-specs">${specRows}${extraRows}</div>
+      <div class="mc-section-label">Applications</div>
+      <div class="mc-apps">${apps.map((a, i) => `<span class="mc-app">${appIcons[i % appIcons.length]} ${esc(a)}</span>`).join('')}</div>
+    </div>`;
+
+      /* Show */
+      overlay.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => requestAnimationFrame(() => overlay.classList.add('ov-vis')));
+      overlay.scrollTop = 0;
+
+      /* Highlight card */
+      document.querySelectorAll('.pcard').forEach(c => c.classList.toggle('pcard-active', c.dataset.id === p.id));
+
+      /* Close btn */
+      document.getElementById('mc-close')?.addEventListener('click', closeOverlay, { once: true });
+    }
+
+    function closeOverlay() {
+      const overlay = document.getElementById('product-overlay'); if (!overlay) return;
+      overlay.classList.remove('ov-vis');
+      document.body.style.overflow = '';
+      setTimeout(() => { overlay.style.display = 'none'; }, 380);
+      document.querySelectorAll('.pcard').forEach(c => c.classList.remove('pcard-active'));
+    }
+
+    function buildAutoDesc(p) {
+      const s = p.specs || {}, parts = [];
+      if (s.Phase) parts.push(s.Phase);
+      if (s.Voltage) parts.push(s.Voltage + ' rated');
+      if (s.Capacity) parts.push(s.Capacity);
+      if (s.Communication) parts.push(s.Communication + ' connectivity');
+      return (parts.length ? parts.join(' · ') + '. ' : '') +
+        `High-quality ${p.category.toLowerCase()} manufactured by Zhejiang Yomin Electric Co., Ltd. CE certified, ISO9001, exported to 95+ countries worldwide.`;
+    }
+
+    /* ── SVG FALLBACKS ── */
+    function catSvg(cat, size = 64) {
+      const P = {
+        'Energy Meter': `<path d="M14 12h36v18H14z" fill="rgba(200,169,110,.1)" stroke="#c8a96e" stroke-width="1.5" rx="3"/><text x="32" y="25" text-anchor="middle" fill="#c8a96e" font-size="9" font-family="monospace">kWh</text><line x1="18" y1="38" x2="46" y2="38" stroke="#c8a96e" stroke-width="1.2"/><circle cx="32" cy="48" r="6" stroke="#c8a96e" stroke-width="1.2" fill="none"/>`,
+        'Voltage Stabilizer/Regulator': `<rect x="8" y="14" width="48" height="36" rx="4" fill="rgba(200,169,110,.07)" stroke="#c8a96e" stroke-width="1.5"/><path d="M14 38L22 22L30 42L38 28L46 38L52 32" stroke="#c8a96e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`,
+        'Current Transformer': `<circle cx="32" cy="32" r="22" stroke="#c8a96e" stroke-width="1.5" fill="rgba(200,169,110,.05)"/><circle cx="32" cy="32" r="10" stroke="#c8a96e" stroke-width="1.2" fill="rgba(200,169,110,.12)"/><line x1="32" y1="10" x2="32" y2="22" stroke="#c8a96e" stroke-width="1.5"/><line x1="32" y1="42" x2="32" y2="54" stroke="#c8a96e" stroke-width="1.5"/>`,
+        'Variac/Transformer': `<circle cx="22" cy="32" r="14" stroke="#c8a96e" stroke-width="1.5" fill="rgba(200,169,110,.06)"/><circle cx="42" cy="32" r="14" stroke="#c8a96e" stroke-width="1.5" fill="rgba(200,169,110,.06)"/><line x1="8" y1="32" x2="13" y2="32" stroke="#c8a96e" stroke-width="1.5"/><line x1="51" y1="32" x2="56" y2="32" stroke="#c8a96e" stroke-width="1.5"/>`,
+        'Solar/PV Products': `<circle cx="32" cy="32" r="10" fill="rgba(200,169,110,.15)" stroke="#c8a96e" stroke-width="1.5"/><path d="M32 10v8M32 46v8M10 32h8M46 32h8M16 16l6 6M42 42l6 6M42 16l-6 6M16 42l6-6" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round"/>`,
+        'Tile Leveling System': `<rect x="8" y="16" width="20" height="20" rx="2" fill="rgba(200,169,110,.1)" stroke="#c8a96e" stroke-width="1.5"/><rect x="36" y="16" width="20" height="20" rx="2" fill="rgba(200,169,110,.1)" stroke="#c8a96e" stroke-width="1.5"/><rect x="22" y="32" width="20" height="20" rx="2" fill="rgba(200,169,110,.1)" stroke="#c8a96e" stroke-width="1.5"/>`,
+        'Terminal & Connector': `<rect x="12" y="22" width="40" height="24" rx="3" fill="rgba(200,169,110,.07)" stroke="#c8a96e" stroke-width="1.5"/><line x1="24" y1="22" x2="24" y2="46" stroke="#c8a96e" stroke-width="1"/><line x1="40" y1="22" x2="40" y2="46" stroke="#c8a96e" stroke-width="1"/><rect x="19" y="12" width="10" height="12" rx="2" fill="rgba(200,169,110,.25)"/><rect x="35" y="12" width="10" height="12" rx="2" fill="rgba(200,169,110,.25)"/>`,
+        'Fuse & Protection': `<rect x="24" y="10" width="16" height="44" rx="4" fill="rgba(200,169,110,.1)" stroke="#c8a96e" stroke-width="1.5"/><line x1="32" y1="10" x2="32" y2="4" stroke="#c8a96e" stroke-width="2"/><line x1="32" y1="54" x2="32" y2="60" stroke="#c8a96e" stroke-width="2"/><line x1="26" y1="32" x2="38" y2="32" stroke="#c8a96e" stroke-width="1.5"/>`,
+      };
+      const d = P[cat] || `<rect x="10" y="10" width="44" height="44" rx="4" fill="rgba(200,169,110,.07)" stroke="#c8a96e" stroke-width="1.5"/><path d="M22 46L22 30M32 46L32 20M42 46L42 36" stroke="#c8a96e" stroke-width="2.5" stroke-linecap="round"/>`;
+      return `<svg viewBox="0 0 64 64" fill="none" width="${size}" height="${size}">${d}</svg>`;
+    }
+
+    function esc(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  </script>
+</body>
+
+</html>
