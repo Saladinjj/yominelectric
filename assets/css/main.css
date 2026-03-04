@@ -35,41 +35,6 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── NAV ─── */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; padding: 0 36px; height: 68px; background: rgba(13,13,13,.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--bds); transition: background var(--tr); gap: 0; }
-/* Mobile header spacing */
-@media (max-width: 768px) {
-  nav { 
-    padding: 0 16px; 
-    height: 60px; 
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    background: rgba(13,13,13,0.98) !important;
-    z-index: 200 !important;
-  }
-  .n-logo { 
-    display: flex !important; 
-    align-items: center !important; 
-    gap: 8px; 
-    flex-shrink: 0;
-  }
-  .n-logo img { 
-    height: 36px; 
-    width: auto;
-    display: block;
-  }
-  .n-rt { 
-    display: flex !important; 
-    align-items: center !important; 
-    gap: 10px; 
-    flex-shrink: 0;
-    margin-left: auto;
-  }
-  .n-ctr, .n-rt .lsw, .n-rt .ncta { display: none !important; }
-  .ham { 
-    display: flex !important; 
-    margin-left: 0;
-  }
-}
 nav.sc { background: rgba(13,13,13,.99); }
 .n-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
 .n-logo img { height: 44px; width: auto; object-fit: contain; filter: brightness(1.1); }
@@ -150,12 +115,6 @@ footer { background: var(--bgs); border-top: 1px solid var(--bds); padding: 60px
   nav { padding: 0 24px; }
 }
 @media (max-width: 768px) {
-  /* Prevent horizontal scroll */
-  html, body {
-    max-width: 100vw;
-    overflow-x: hidden;
-  }
-  
   /* Nav */
   .n-ctr, .n-rt .lsw, .n-rt .ncta { display: none; }
   .ham { display: flex; }
@@ -166,73 +125,21 @@ footer { background: var(--bgs); border-top: 1px solid var(--bds); padding: 60px
   .n-rt { gap: 6px; }
   .tpbtn { width: 30px; height: 30px; font-size: 14px; }
   .theme-pair { gap: 3px; }
-  
-  /* Hero - prevent overflow */
-  .page-hero { 
-    padding: 90px 20px 48px; 
-    max-width: 100vw;
-    overflow: hidden;
-  }
-  .page-hero-in { max-width: 100%; }
-  .ph-title { 
-    font-size: clamp(28px, 7vw, 48px); 
-    letter-spacing: -1px;
-    word-wrap: break-word;
-  }
+  /* Hero */
+  .page-hero { padding: 90px 20px 48px; }
+  .ph-title { font-size: clamp(28px, 7vw, 48px); letter-spacing: -1px; }
   .ph-desc { font-size: 14px; }
   h2.stitle { font-size: clamp(24px, 6vw, 40px); }
   .sdesc { font-size: 13px; margin-bottom: 28px; }
-  
-  /* Footer - stack vertically */
+  /* Footer */
   footer { padding: 40px 20px 24px; }
-  .ft-grid { 
-    grid-template-columns: 1fr; 
-    gap: 28px; 
-    margin-bottom: 32px; 
-  }
-  .ft-bot { 
-    flex-direction: column; 
-    align-items: flex-start; 
-    gap: 10px; 
-  }
-  
-  /* Buttons - full width on mobile */
-  .bpri, .bsec { 
-    padding: 12px 22px; 
-    font-size: 13px;
-    width: 100%;
-    justify-content: center;
-  }
-  
-  /* Mobile menu - proper sizing */
-  .mob a { font-size: 24px; padding: 8px 0; }
-  .mob-lngs { 
-    flex-wrap: wrap; 
-    justify-content: center;
-    gap: 8px;
-  }
-  .mob-x { top: 16px; right: 16px; }
-  
-  /* Floating buttons - move left to avoid overlap */
-  .float-btns { 
-    bottom: 16px; 
-    right: 14px; 
-    gap: 10px; 
-  }
-  .float-btn { 
-    width: 50px; 
-    height: 50px; 
-  }
-  .float-btn svg { width: 24px; height: 24px; }
-  .float-btn-label { display: none; }
-  
-  /* WeChat modal - fit screen */
-  .wc-modal {
-    width: calc(100% - 32px);
-    max-width: 340px;
-    padding: 28px 24px 24px;
-  }
-  .wc-qr-img { width: 160px; height: 160px; }
+  .ft-grid { grid-template-columns: 1fr; gap: 28px; margin-bottom: 32px; }
+  .ft-bot { flex-direction: column; align-items: flex-start; gap: 10px; }
+  /* Buttons */
+  .bpri, .bsec { padding: 12px 22px; font-size: 13px; }
+  /* Mobile menu */
+  .mob a { font-size: 26px; }
+  .mob-lngs { flex-wrap: wrap; justify-content: center; }
 }
 @media (max-width: 480px) {
   nav { padding: 0 14px; height: 56px; }
@@ -240,33 +147,12 @@ footer { background: var(--bgs); border-top: 1px solid var(--bds); padding: 60px
   .n-logo-fb { font-size: 13px; }
   .tpbtn { width: 28px; height: 28px; font-size: 13px; }
   .ham span { width: 20px; }
-  
   .page-hero { padding: 80px 16px 40px; }
-  .page-hero-in { padding: 0; }
   h2.stitle { font-size: clamp(22px, 6.5vw, 36px); letter-spacing: -.5px; }
   .ph-title { font-size: clamp(24px, 8vw, 40px); letter-spacing: -1px; }
-  .ph-desc { font-size: 13px; line-height: 1.7; }
-  
   footer { padding: 32px 16px 20px; }
   .ft-grid { gap: 22px; }
-  .ft-bot { align-items: center; text-align: center; }
-  .ft-bot p { text-align: center; }
-  .ft-soc { justify-content: center; }
-  
-  .bpri, .bsec { 
-    width: 100%; 
-    justify-content: center;
-    padding: 14px 20px;
-    font-size: 14px;
-  }
-  
-  /* Mobile menu adjustments */
-  .mob a { font-size: 22px; }
-  .mlb { padding: 6px 14px; font-size: 12px; }
-  
-  /* Float buttons smaller */
-  .float-btns { bottom: 12px; right: 12px; }
-  .float-btn { width: 46px; height: 46px; }
+  .bpri, .bsec { width: 100%; justify-content: center; }
 }
 
 /* ═══════════════════════════════════════════════════
@@ -438,39 +324,73 @@ body.light .mlb { background: rgba(0,0,0,.06); border-color: rgba(0,0,0,.12); }
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
-  /* Smaller floating buttons */
+  /* Mobile header layout - logo left, buttons right */
+  nav { 
+    padding: 0 16px !important; 
+    height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .n-logo { 
+    display: flex !important; 
+    align-items: center !important; 
+    flex-shrink: 0;
+  }
+  .n-logo img { 
+    height: 36px !important; 
+    width: auto !important;
+    display: block !important;
+  }
+  .n-rt { 
+    display: flex !important; 
+    align-items: center !important; 
+    gap: 10px !important;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+  .n-ctr, .n-rt .lsw, .n-rt .ncta { 
+    display: none !important; 
+  }
+  .ham { 
+    display: flex !important; 
+    margin-left: 0 !important;
+  }
+  
+  /* Floating buttons - smaller and closer */
   .float-btns { 
-    bottom: 12px; 
-    right: 12px; 
-    gap: 8px; 
-    z-index: 100;
+    bottom: 16px !important; 
+    right: 14px !important; 
+    gap: 8px !important; 
+    z-index: 100 !important;
   }
   .float-btn { 
-    width: 44px; 
-    height: 44px; 
-    box-shadow: 0 4px 16px rgba(0,0,0,.4);
+    width: 44px !important; 
+    height: 44px !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,.4) !important;
   }
   .float-btn svg { 
-    width: 22px; 
-    height: 22px; 
+    width: 22px !important; 
+    height: 22px !important; 
   }
   .float-btn-label { 
-    display: none; 
+    display: none !important; 
   }
 }
 
-/* Hide float buttons when mobile menu is open */
-body:has(.mob.op) .float-btns {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .2s;
-}
-
-/* Also hide float btns on pages that use inline mob — covers all pages */
-.mob.op ~ .float-btns,
-.mob.op + .float-btns {
-  opacity: 0 !important;
-  pointer-events: none !important;
+@media (max-width: 480px) {
+  nav { 
+    padding: 0 12px !important; 
+    height: 56px !important;
+  }
+  .n-logo img { 
+    height: 32px !important; 
+  }
+  .tpbtn { 
+    width: 32px !important; 
+    height: 32px !important; 
+    font-size: 14px !important;
+  }
 }
 
 /* ─── RTL OVERRIDES — keep nav/logo LTR ─── */
