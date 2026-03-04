@@ -287,7 +287,7 @@ body.light .tpbtn-act{background:rgba(184,148,26,.15) !important;border-color:rg
 
 /* RESPONSIVE */
 @media(max-width:1200px){.pg{grid-template-columns:repeat(4,1fr)}section{padding:80px 40px}.gh{padding:0 40px}.sband{padding:70px 40px}footer{padding:70px 40px 36px}.fmq{margin:0 -40px 50px}}
-@media(max-width:960px){.h-in{grid-template-columns:1fr}.h-r{min-height:45vw;max-height:420px}.h-r::after{background:linear-gradient(to top,#0d0d0d 0%,transparent 50%)}.h-l{padding:60px 40px 40px}.n-ctr{display:none}.ham{display:flex}.pg{grid-template-columns:repeat(3,1fr)}.tg{grid-template-columns:1fr 1fr}.prsteps{grid-template-columns:repeat(2,1fr)}.prstep:first-child{border-radius:var(--r) 0 0 0}.prstep:nth-child(2){border-radius:0 var(--r) 0 0}.prstep:nth-child(3){border-radius:0 0 0 var(--r)}.prstep:last-child{border-radius:0 0 var(--r) 0}.sgrid{grid-template-columns:repeat(2,1fr)}.fgrid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:960px){.h-in{grid-template-columns:1fr}.h-r{min-height:50vh;max-height:none}.h-r::after{background:linear-gradient(to top,#0d0d0d 0%,transparent 50%)}.h-l{padding:60px 40px 40px}.n-ctr{display:none}.ham{display:flex}.pg{grid-template-columns:repeat(3,1fr)}.tg{grid-template-columns:1fr 1fr}.prsteps{grid-template-columns:repeat(2,1fr)}.prstep:first-child{border-radius:var(--r) 0 0 0}.prstep:nth-child(2){border-radius:0 var(--r) 0 0}.prstep:nth-child(3){border-radius:0 0 0 var(--r)}.prstep:last-child{border-radius:0 0 var(--r) 0}.sgrid{grid-template-columns:repeat(2,1fr)}.fgrid{grid-template-columns:1fr 1fr;gap:32px}}
 @media(max-width:640px){
   section{padding:64px 20px}
   nav{padding:0 16px;height:60px;display:flex;align-items:center;justify-content:space-between}
@@ -298,8 +298,8 @@ body.light .tpbtn-act{background:rgba(184,148,26,.15) !important;border-color:rg
   .n-rt .lbtn{display:flex!important;align-items:center;justify-content:center;width:32px!important;height:32px!important;padding:0!important;border-radius:50%!important}
   .n-rt .lbtn svg,.n-rt .lbtn span:not(:first-child){display:none!important}
   .h-l{padding:48px 20px 32px}
-  .h-r{max-height:280px}
-  .h-r img{object-fit:cover;object-position:center}
+  .h-r{max-height:none;height:auto;min-height:50vh}
+  .h-r img{object-fit:contain;object-position:center}
   .hstats{justify-content:center;gap:10px}
   .scard{padding:12px 14px;flex:0 1 auto;min-width:80px;text-align:center}
   .pg{grid-template-columns:repeat(2,1fr)}
@@ -322,7 +322,7 @@ body.light .tpbtn-act{background:rgba(184,148,26,.15) !important;border-color:rg
   section{padding:48px 16px}
   nav{padding:0 12px;height:56px}
   .n-logo img{height:32px!important}
-  .h-r{max-height:220px}
+  .h-r{max-height:none;height:auto;min-height:50vh}
   .hstats{justify-content:center}
   .scard{min-width:70px;padding:10px 12px}
   .snum{font-size:20px}
