@@ -288,8 +288,106 @@ body.light .tpbtn-act{background:rgba(184,148,26,.15) !important;border-color:rg
 /* RESPONSIVE */
 @media(max-width:1200px){.pg{grid-template-columns:repeat(4,1fr)}section{padding:80px 40px}.gh{padding:0 40px}.sband{padding:70px 40px}footer{padding:70px 40px 36px}.fmq{margin:0 -40px 50px}}
 @media(max-width:960px){.h-in{grid-template-columns:1fr}.h-r{min-height:45vw;max-height:420px}.h-r::after{background:linear-gradient(to top,#0d0d0d 0%,transparent 50%)}.h-l{padding:60px 40px 40px}.n-ctr,.lsw,.ncta{display:none}.ham{display:flex}.pg{grid-template-columns:repeat(3,1fr)}.tg{grid-template-columns:1fr 1fr}.prsteps{grid-template-columns:repeat(2,1fr)}.prstep:first-child{border-radius:var(--r) 0 0 0}.prstep:nth-child(2){border-radius:0 var(--r) 0 0}.prstep:nth-child(3){border-radius:0 0 0 var(--r)}.prstep:last-child{border-radius:0 0 var(--r) 0}.sgrid{grid-template-columns:repeat(2,1fr)}.fgrid{grid-template-columns:1fr 1fr;gap:32px}}
-@media(max-width:640px){section{padding:64px 20px}nav{padding:0 16px;height:60px}.n-logo img{height:36px!important}.tpbtn{width:30px;height:30px;font-size:14px}.h-l{padding:48px 20px 32px}.h-r{max-height:260px}.pg{grid-template-columns:repeat(2,1fr)}.tg{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.fi:nth-child(n){border-radius:0}.fi:first-child{border-radius:var(--r) var(--r) 0 0}.fi:last-child{border-radius:0 0 var(--r) var(--r)}.fgrid{grid-template-columns:1fr;gap:26px}footer{padding:56px 20px 28px}.fmq{margin:0 -20px 40px}.sgrid{grid-template-columns:1fr 1fr}.hstats{gap:10px}.scard{padding:12px 14px}.ctasec{padding:80px 20px}.gh{padding:0 20px}}
-@media(max-width:480px){section{padding:48px 16px}nav{padding:0 14px;height:56px}.n-logo img{height:32px!important}.h-l{padding:40px 16px 28px}.h-r{max-height:220px}.pg{grid-template-columns:1fr 1fr}.tg{grid-template-columns:1fr}.sgrid{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}.hstats{flex-direction:column;gap:8px}footer{padding:40px 16px 24px}.fmq{margin:0 -16px 32px}}
+@media(max-width:640px){
+  /* Reduce section gaps */
+  section{padding:40px 20px}
+  
+  /* Hero section - add space below fixed header */
+  .hero{padding-top:60px}
+  .h-l{padding:30px 20px 24px}
+  .h-r{max-height:200px}
+  
+  /* Product grid */
+  .pg{grid-template-columns:repeat(2,1fr);gap:10px}
+  
+  /* Services */
+  .stabs{width:100%;justify-content:center}
+  .tbtn{padding:8px 16px;font-size:12px}
+  .sp{gap:30px}
+  
+  /* Process steps */
+  .prsteps{grid-template-columns:repeat(2,1fr)}
+  .prstep{padding:24px 16px}
+  .prnb{font-size:48px}
+  .pricon{width:40px;height:40px;font-size:20px}
+  .prstep h4{font-size:16px}
+  
+  /* Stats */
+  .sband{padding:40px 20px}
+  .sitem{padding:24px 16px}
+  
+  /* Testimonials */
+  .tg{grid-template-columns:1fr}
+  
+  /* FAQ */
+  .fg{gap:1px}
+  .fq{padding:16px 20px;font-size:13px}
+  
+  /* CTA */
+  .ctasec{padding:60px 20px}
+  
+  /* Footer */
+  footer{padding:40px 20px 24px}
+  
+  nav{padding:0 16px;height:60px}
+  .n-logo img{height:36px!important}
+  .tpbtn{width:32px;height:32px;font-size:14px}
+  .ham{display:flex;gap:4px}
+  .ham span{width:20px;height:2px}
+  
+  /* Stats cards */
+  .hstats{flex-wrap:wrap;gap:8px}
+  .scard{min-width:70px;padding:10px 14px}
+  .snum{font-size:22px}
+  
+  .gh{padding:0 20px}
+  
+  /* Marquee */
+  .marq{padding:18px 0}
+  .mi{font-size:11px;padding:0 24px}
+}
+@media(max-width:480px){
+  section{padding:32px 16px}
+  
+  /* Hero */
+  .hero{padding-top:56px}
+  .h-l{padding:24px 16px 20px}
+  .h-r{max-height:180px}
+  
+  .htitle{font-size:clamp(28px,8vw,40px)}
+  .hdesc{font-size:13px;line-height:1.7}
+  .h-act{flex-direction:column;width:100%}
+  .bpri,.bghost{width:100%;text-align:center}
+  
+  /* Products */
+  .pg{grid-template-columns:1fr 1fr;gap:8px}
+  .pimg{aspect-ratio:1/1}
+  .pinfo{padding:8px}
+  .pname{font-size:11px}
+  .pcat{font-size:8px}
+  
+  /* Gallery */
+  .gs{padding:40px 0}
+  .gc{width:160px}
+  
+  /* Stats */
+  .sband{padding:32px 16px}
+  .sgrid{grid-template-columns:1fr 1fr}
+  .sbig{font-size:clamp(28px,8vw,40px)}
+  
+  /* Testimonials */
+  .tc{padding:20px 16px}
+  .tt{font-size:13px}
+  
+  /* Footer */
+  footer{padding:32px 16px 20px}
+  .fmq{margin:0 -16px 32px;padding:10px 0}
+  
+  /* Header */
+  nav{padding:0 12px;height:56px}
+  .n-logo img{height:32px!important}
+  .tpbtn{width:28px;height:28px;font-size:12px}
+}
 
 /* ── LIGHT MODE FULL OVERRIDE ────────────────────────────── */
 body.light .htitle{color:#1a1a1a}

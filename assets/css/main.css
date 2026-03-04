@@ -35,6 +35,41 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── NAV ─── */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; padding: 0 36px; height: 68px; background: rgba(13,13,13,.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--bds); transition: background var(--tr); gap: 0; }
+/* Mobile header spacing */
+@media (max-width: 768px) {
+  nav { 
+    padding: 0 16px; 
+    height: 60px; 
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: rgba(13,13,13,0.98) !important;
+    z-index: 200 !important;
+  }
+  .n-logo { 
+    display: flex !important; 
+    align-items: center !important; 
+    gap: 8px; 
+    flex-shrink: 0;
+  }
+  .n-logo img { 
+    height: 36px; 
+    width: auto;
+    display: block;
+  }
+  .n-rt { 
+    display: flex !important; 
+    align-items: center !important; 
+    gap: 10px; 
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+  .n-ctr, .n-rt .lsw, .n-rt .ncta { display: none !important; }
+  .ham { 
+    display: flex !important; 
+    margin-left: 0;
+  }
+}
 nav.sc { background: rgba(13,13,13,.99); }
 .n-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
 .n-logo img { height: 44px; width: auto; object-fit: contain; filter: brightness(1.1); }
@@ -403,10 +438,25 @@ body.light .mlb { background: rgba(0,0,0,.06); border-color: rgba(0,0,0,.12); }
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
-  .float-btns { bottom: 16px; right: 14px; gap: 8px; }
-  .float-btn { width: 48px; height: 48px; }
-  .float-btn svg { width: 24px; height: 24px; }
-  .float-btn-label { font-size: 10px; right: 56px; }
+  /* Smaller floating buttons */
+  .float-btns { 
+    bottom: 12px; 
+    right: 12px; 
+    gap: 8px; 
+    z-index: 100;
+  }
+  .float-btn { 
+    width: 44px; 
+    height: 44px; 
+    box-shadow: 0 4px 16px rgba(0,0,0,.4);
+  }
+  .float-btn svg { 
+    width: 22px; 
+    height: 22px; 
+  }
+  .float-btn-label { 
+    display: none; 
+  }
 }
 
 /* Hide float buttons when mobile menu is open */
