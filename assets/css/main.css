@@ -39,7 +39,7 @@ nav.sc { background: rgba(13,13,13,.99); }
 .n-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
 .n-logo img { height: 44px; width: auto; object-fit: contain; filter: brightness(1.1); }
 .n-logo-fb { font-family: var(--sf); font-size: 17px; color: var(--tx); }
-.n-ctr { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 2px; list-style: none; }
+.n-ctr { position: absolute; left: 44%; transform: translateX(-50%); display: flex; align-items: center; gap: 2px; list-style: none; }
 .n-ctr a { text-decoration: none; color: var(--mt); font-size: 13px; font-weight: 500; letter-spacing: .3px; padding: 8px 14px; border-radius: 8px; transition: color .2s, background .2s; }
 .n-ctr a:hover, .n-ctr a.active { color: var(--tx); background: rgba(255,255,255,.05); }
 .n-ctr a.active { color: var(--ac); }
