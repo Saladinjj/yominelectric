@@ -1947,9 +1947,21 @@
       const apps = CAT_APPS[p.category] || CAT_APPS['Other'];
       const appIcons = ['🏠','🏪','⚡','🏭','🌐','🔌','📡','🔧'];
 
-      /* Gallery images */
-      const galleryImgs = (ali.images && ali.images.length)
-        ? ali.images : (p.image ? [p.image] : []);
+      /* Gallery images - always use product's own image as main, enriched images as extras */
+      const galleryImgs = [];
+      if (p.image) {
+        galleryImgs.push(p.image);
+        // Add enriched images only if they're different from main product image
+        if (ali.images && ali.images.length) {
+          ali.images.forEach(img => {
+            if (img !== p.image && !galleryImgs.includes(img)) {
+              galleryImgs.push(img);
+            }
+          });
+        }
+      } else if (ali.images && ali.images.length) {
+        galleryImgs.push(...ali.images);
+      }
       const mainImg = galleryImgs[0] || '';
 
       const imgHtml = mainImg
