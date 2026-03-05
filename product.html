@@ -1902,9 +1902,12 @@
 
     function productCard(p) {
       const specs = p.specs || {};
+      const ali = ALI[p.id] || {};
+      const galleryImgs = (ali.images && ali.images.length) ? ali.images : (p.image ? [p.image] : []);
+      const cardImg = galleryImgs[0] || '';
       const pills = Object.entries(specs).slice(0, 3).map(([k, v]) => `<span class="spec-pill">${esc(String(v))}</span>`).join('');
-      const imgHtml = p.image
-        ? `<img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="pcard-img-fb" style="display:none">${catSvg(p.category)}</div>`
+      const imgHtml = cardImg
+        ? `<img src="${esc(cardImg)}" alt="${esc(p.title)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="pcard-img-fb" style="display:none">${catSvg(p.category)}</div>`
         : `<div class="pcard-img-fb">${catSvg(p.category)}</div>`;
       return `<a class="pcard" href="#" data-id="${esc(p.id)}" title="${esc(p.title)}">
     <div class="pcard-img">${imgHtml}</div>
