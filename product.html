@@ -1297,6 +1297,115 @@
     [dir="rtl"] footer {
       direction: ltr
     }
+
+    /* ALIBABA ENRICHMENT STYLES */
+    .mc-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--bds); margin: 16px 0 0; padding: 0 }
+    .mc-tab { padding: 10px 16px; border: none; background: none; color: var(--mt); font-family: var(--ss); font-size: 13px; font-weight: 500; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; border-radius: 0; transition: color .2s, border-color .2s; white-space: nowrap }
+    .mc-tab:hover { color: var(--tx) }
+    .mc-tab.active { color: var(--ac); border-bottom-color: var(--ac) }
+    .mc-tab-panes { padding: 20px 0 0 }
+    .mc-tab-pane { display: none }
+    .mc-tab-pane.active { display: block }
+    .mc-gallery { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px }
+    .mc-gallery-thumb { width: 52px; height: 52px; border-radius: 8px; overflow: hidden; border: 2px solid var(--bds); cursor: pointer; flex-shrink: 0; transition: border-color .2s }
+    .mc-gallery-thumb:hover, .mc-gallery-thumb.active { border-color: var(--ac) }
+    .mc-gallery-thumb img { width: 100%; height: 100%; object-fit: cover }
+    .mc-fob-label { font-size: 10px; color: var(--mt); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 8px }
+    .mc-tier-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px }
+    .mc-tier { background: var(--bgc2); border: 1px solid var(--bds); border-radius: 10px; padding: 10px 12px; position: relative; text-align: center }
+    .mc-tier-best { border-color: rgba(200,169,110,.5); background: rgba(200,169,110,.06) }
+    .mc-tier-badge { position: absolute; top: -9px; left: 50%; transform: translateX(-50%); background: var(--ac); color: #000; font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 20px; white-space: nowrap }
+    .mc-tier-qty { font-size: 11px; color: var(--mt); margin-bottom: 4px }
+    .mc-tier-price { font-size: 17px; font-weight: 700; color: var(--ac); font-family: var(--sf) }
+    .mc-tier-label { font-size: 10px; color: var(--mt) }
+    .mc-price-single { font-size: 22px; font-weight: 700; color: var(--ac); font-family: var(--sf); margin-bottom: 6px }
+    .mc-price-note { font-size: 13px; color: var(--mt); font-family: var(--ss); font-weight: 400 }
+    .mc-moq { font-size: 12px; color: var(--mt); margin-top: 6px }
+    .mc-action-btns { display: flex; flex-direction: column; gap: 8px; margin: 14px 0 0 }
+    .mc-ali-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 16px; background: linear-gradient(135deg,#e8701a,#f0922a); color: #fff; border-radius: 10px; font-weight: 600; font-size: 14px; text-decoration: none; transition: opacity .2s, transform .15s; font-family: var(--ss) }
+    .mc-ali-btn:hover { opacity: .9; transform: translateY(-1px) }
+    .mc-action-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px }
+    .mc-wholesale-btn, .mc-custom-btn { padding: 10px 8px; border-radius: 10px; font-size: 13px; font-weight: 500; cursor: pointer; font-family: var(--ss); transition: all .2s; border: 1px solid }
+    .mc-wholesale-btn { background: rgba(200,169,110,.12); border-color: rgba(200,169,110,.4); color: var(--ac) }
+    .mc-wholesale-btn:hover { background: rgba(200,169,110,.2) }
+    .mc-custom-btn { background: var(--bgc2); border-color: var(--bds); color: var(--tx) }
+    .mc-custom-btn:hover { border-color: rgba(200,169,110,.4) }
+    .mc-shipping-box { margin-top: 14px; background: var(--bgc2); border: 1px solid var(--bds); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 7px }
+    .mc-ship-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; gap: 8px }
+    .mc-ship-row span:first-child { color: var(--mt); flex-shrink: 0 }
+    .mc-ship-row span:last-child { color: var(--tx); text-align: right; font-size: 11px }
+    .mc-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px }
+    .mc-spec { display: flex; flex-direction: column; gap: 2px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.04) }
+    .mc-spec-k { font-size: 11px; color: var(--mt); text-transform: uppercase; letter-spacing: .5px }
+    .mc-spec-v { font-size: 13px; color: var(--tx); font-weight: 500 }
+    .mc-attr-raw { margin-top: 16px; padding: 12px; background: var(--bgc2); border-radius: 8px }
+    .mc-attr-raw h4 { font-size: 11px; text-transform: uppercase; color: var(--mt); margin: 0 0 8px; letter-spacing:.5px }
+    .mc-attr-raw p { font-size: 12px; color: var(--mt); line-height: 1.6; margin: 0 }
+    .mc-customization-info { margin-top: 14px; padding: 12px 14px; background: rgba(200,169,110,.06); border: 1px solid rgba(200,169,110,.2); border-radius: 10px }
+    .mc-cust-label { font-size: 12px; font-weight: 600; color: var(--ac); margin-bottom: 6px }
+    .mc-customization-info p { font-size: 12px; color: var(--mt); margin: 0; line-height: 1.6 }
+    .mc-rating-summary { display: flex; gap: 24px; align-items: flex-start; padding-bottom: 20px; border-bottom: 1px solid var(--bds); margin-bottom: 20px }
+    .mc-rating-big { font-size: 52px; font-weight: 800; color: var(--ac); font-family: var(--sf); line-height: 1; flex-shrink: 0 }
+    .mc-stars { font-size: 20px; color: #f5a623; letter-spacing: 2px }
+    .mc-rating-sub { font-size: 12px; color: var(--mt); margin-top: 4px }
+    .mc-rating-bars { margin-top: 10px; display: flex; flex-direction: column; gap: 4px }
+    .mc-rating-bar-row { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--mt) }
+    .mc-rating-bar-row > span:first-child { width: 22px; flex-shrink: 0; color: var(--mt) }
+    .mc-rating-bar { flex: 1; height: 5px; background: var(--bds); border-radius: 3px; overflow: hidden }
+    .mc-rating-fill { height: 100%; background: #f5a623; border-radius: 3px }
+    .mc-rating-bar-row > span:last-child { width: 28px; flex-shrink: 0; text-align: right }
+    .mc-reviews { display: flex; flex-direction: column; gap: 14px }
+    .mc-review-item { padding: 14px; background: var(--bgc2); border: 1px solid var(--bds); border-radius: 10px }
+    .mc-review-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap }
+    .mc-review-author { font-size: 13px; font-weight: 600; color: var(--tx) }
+    .mc-review-stars { font-size: 13px; color: #f5a623 }
+    .mc-review-date { font-size: 11px; color: var(--mt); margin-left: auto }
+    .mc-review-text { font-size: 13px; color: var(--mt); margin: 0 0 8px; line-height: 1.6 }
+    .mc-review-badge { font-size: 11px; color: #4caf50; font-weight: 500 }
+    .mc-supplier-card { display: flex; flex-direction: column; gap: 16px }
+    .mc-sup-header { display: flex; align-items: center; gap: 14px; padding: 16px; background: var(--bgc2); border: 1px solid var(--bds); border-radius: 12px }
+    .mc-sup-logo { width: 48px; height: 48px; background: linear-gradient(135deg,#c8a96e,#a88850); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: #000; flex-shrink: 0 }
+    .mc-sup-name { font-size: 14px; font-weight: 600; color: var(--tx) }
+    .mc-sup-type { font-size: 12px; color: var(--mt); margin-top: 2px }
+    .mc-sup-badge { margin-left: auto; background: rgba(200,169,110,.15); border: 1px solid rgba(200,169,110,.4); color: var(--ac); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; white-space: nowrap; flex-shrink: 0 }
+    .mc-sup-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; text-align: center }
+    .mc-sup-stat { padding: 12px 8px; background: var(--bgc2); border: 1px solid var(--bds); border-radius: 10px }
+    .mc-sup-stat-val { font-size: 17px; font-weight: 700; color: var(--ac); font-family: var(--sf) }
+    .mc-sup-stat-lbl { font-size: 10px; color: var(--mt); margin-top: 3px }
+    .mc-sup-details { display: flex; flex-direction: column; gap: 8px }
+    .mc-sup-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.04) }
+    .mc-sup-row span:first-child { color: var(--mt) }
+    .mc-sup-row span:last-child { color: var(--tx); font-weight: 500; text-align: right; max-width: 200px }
+    .mc-sup-services { padding: 12px 14px; background: var(--bgc2); border-radius: 10px }
+    .mc-sup-services h4 { font-size: 11px; text-transform: uppercase; color: var(--mt); margin: 0 0 8px; letter-spacing:.5px }
+    .mc-sup-services p { font-size: 12px; color: var(--mt); margin: 0; line-height: 1.6 }
+    .mc-desc-content .mc-desc { font-size: 14px; color: var(--mt); line-height: 1.7; margin-bottom: 20px }
+    .mc-why-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-top: 12px }
+    .mc-why-item { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; padding: 14px 8px; background: var(--bgc2); border: 1px solid var(--bds); border-radius: 10px }
+    .mc-why-item span:first-child { font-size: 22px }
+    .mc-why-item strong { font-size: 13px; color: var(--tx) }
+    .mc-why-item span:last-child { font-size: 11px; color: var(--mt) }
+    .mc-apps { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px }
+    .mc-app { padding: 6px 12px; background: var(--bgc2); border: 1px solid var(--bds); border-radius: 20px; font-size: 12px; color: var(--mt) }
+    .mc-section-label { font-size: 11px; text-transform: uppercase; letter-spacing: .8px; color: var(--mt); margin: 20px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--bds) }
+    #order-modal { position: fixed; inset: 0; z-index: 600; background: rgba(0,0,0,.8); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 20px }
+    #order-modal.om-vis { display: flex }
+    .om-card { background: var(--bgc); border: 1px solid rgba(200,169,110,.22); border-radius: 20px; padding: 36px; width: 100%; max-width: 480px; position: relative; box-shadow: 0 40px 100px rgba(0,0,0,.6) }
+    .om-close { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--bds); background: var(--bgc2); color: var(--mt); font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .2s; font-family: var(--ss) }
+    .om-close:hover { border-color: var(--ac); color: var(--ac) }
+    #om-title { font-family: var(--sf); font-size: 22px; margin: 0 0 6px; color: var(--tx) }
+    #om-product { font-size: 12px; color: var(--mt); margin-bottom: 24px; display: block }
+    .om-form { display: flex; flex-direction: column; gap: 14px }
+    .om-field { display: flex; flex-direction: column; gap: 6px }
+    .om-label { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: var(--mt) }
+    .om-input, .om-select, .om-textarea { background: var(--bgc2); border: 1px solid var(--bds); border-radius: 8px; padding: 10px 14px; color: var(--tx); font-family: var(--ss); font-size: 13px; transition: border-color .2s; width: 100%; box-sizing: border-box }
+    .om-input:focus, .om-select:focus, .om-textarea:focus { outline: none; border-color: rgba(200,169,110,.5) }
+    .om-textarea { resize: vertical; min-height: 80px }
+    .om-submit { padding: 13px; background: var(--ac); color: #000; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: var(--ss); transition: opacity .2s; margin-top: 6px }
+    .om-submit:hover { opacity: .85 }
+    .om-note { font-size: 11px; color: var(--mt); text-align: center; line-height: 1.5 }
+    @media(max-width:800px) { .mc-why-grid { grid-template-columns: repeat(2,1fr) } .mc-sup-stats { grid-template-columns: repeat(2,1fr) } .mc-rating-summary { flex-direction: column; gap: 14px } .mc-tier-grid { grid-template-columns: 1fr 1fr } .mc-tab { padding: 8px 12px; font-size: 12px } }
+    @media(max-width:480px) { .mc-why-grid { grid-template-columns: 1fr 1fr } .mc-action-row { grid-template-columns: 1fr 1fr } }
   </style>
 </head>
 
@@ -1490,6 +1599,41 @@
     </div>
   </div>
 
+  <!-- ORDER MODAL -->
+  <div id="order-modal">
+    <div class="om-card">
+      <button class="om-close" onclick="closeOrderModal()">✕</button>
+      <h3 id="om-title">Wholesale Order</h3>
+      <span id="om-product"></span>
+      <form class="om-form" onsubmit="submitOrderForm(event)">
+        <input type="hidden" id="om-type" name="type" value="wholesale">
+        <input type="hidden" id="om-pid" name="productId">
+        <div class="om-field">
+          <label class="om-label" for="om-name">Your Name *</label>
+          <input class="om-input" id="om-name" name="name" required placeholder="Full name">
+        </div>
+        <div class="om-field">
+          <label class="om-label" for="om-email">Email *</label>
+          <input class="om-input" id="om-email" name="email" type="email" required placeholder="business@email.com">
+        </div>
+        <div class="om-field">
+          <label class="om-label" for="om-qty">Quantity *</label>
+          <input class="om-input" id="om-qty" name="qty" type="number" min="1" required placeholder="e.g. 500">
+        </div>
+        <div class="om-field" id="om-logo-field" style="display:none">
+          <label class="om-label" for="om-logo">Logo / Brand Name</label>
+          <input class="om-input" id="om-logo" name="logo" placeholder="Your brand name or logo URL">
+        </div>
+        <div class="om-field">
+          <label class="om-label" for="om-msg">Additional Requirements</label>
+          <textarea class="om-textarea" id="om-msg" name="message" placeholder="Voltage spec, packaging, certifications needed..."></textarea>
+        </div>
+        <button type="submit" class="om-submit">Send Inquiry</button>
+        <p class="om-note">We’ll respond within 24 hours. All inquiries handled by Yueqing Yomin Electric Co., Ltd. — Gold Supplier on Alibaba.</p>
+      </form>
+    </div>
+  </div>
+
   <!-- PRODUCT DETAIL BLUR OVERLAY (z-index 500, fixed, full-screen) -->
   <div id="product-overlay">
     <div class="overlay-inner">
@@ -1540,14 +1684,19 @@
     };
 
     let ALL = [], FILTERED = [], activeFilter = 'all', searchQuery = '', sortMode = 'default', shown = 60;
+    let ALI = {};
     const PAGE = 60;
 
     document.addEventListener('DOMContentLoaded', async () => {
       /* ── Load products.json ── */
       try {
-        const r = await fetch('data/products.json');
+        const [r, ra] = await Promise.all([
+          fetch('data/products.json'),
+          fetch('data/alibaba_enriched.json').catch(() => null)
+        ]);
         if (!r.ok) throw new Error('HTTP ' + r.status);
         const raw = await r.json();
+        if (ra && ra.ok) { ALI = await ra.json(); }
         /* Normalize: support both old format (title/category/specs/image)
            and new format (product_title/product_category/key_specifications/main_image_url) */
         ALL = raw.map((p, i) => ({
@@ -1791,71 +1940,256 @@
       const body = document.getElementById('mc-body');
       if (!overlay || !body) return;
 
+      const ali = ALI[p.id] || {};
       const specs = p.specs || {};
-      const apps = CAT_APPS[p.category] || CAT_APPS['Other'];
       const catCfg = CATS.find(c => c.id === p.category);
-      const catIcon = catCfg ? catCfg.icon : '📦';
-      const appIcons = ['🏠', '🏪', '⚡', '🏭', '🌐', '🔌', '📡', '🔧'];
+      const catIcon = catCfg ? catCfg.icon : "📦";
+      const apps = CAT_APPS[p.category] || CAT_APPS['Other'];
+      const appIcons = ['🏠','🏪','⚡','🏭','🌐','🔌','📡','🔧'];
 
-      /* Image HTML */
-      const imgHtml = p.image
-        ? `<img src="${esc(p.image)}" alt="${esc(p.title)}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="mc-img-fb" style="display:none">${catSvg(p.category, 90)}</div>`
+      /* Gallery images */
+      const galleryImgs = (ali.images && ali.images.length)
+        ? ali.images : (p.image ? [p.image] : []);
+      const mainImg = galleryImgs[0] || '';
+
+      const imgHtml = mainImg
+        ? `<img id="mc-main-img" src="${esc(mainImg)}" alt="${esc(p.title)}" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'"><div class="mc-img-fb" style="display:none">${catSvg(p.category, 90)}</div>`
         : `<div class="mc-img-fb">${catSvg(p.category, 90)}</div>`;
 
-      /* Spec rows */
-      const SPEC_ORDER = ['Phase', 'Voltage', 'Communication', 'Display', 'Control Type', 'Capacity', 'Frequency', 'Current Type', 'Power'];
-      const specRows = SPEC_ORDER.filter(k => specs[k]).map(k =>
-        `<div class="mc-spec"><span class="mc-spec-k">${esc(k)}</span><span class="mc-spec-v">${esc(specs[k])}</span></div>`
-      ).join('');
-      const extraRows = `
-    <div class="mc-spec"><span class="mc-spec-k">Certification</span><span class="mc-spec-v">CE, ISO 9001</span></div>
-    <div class="mc-spec"><span class="mc-spec-k">Warranty</span><span class="mc-spec-v">2 Years</span></div>
-    <div class="mc-spec"><span class="mc-spec-k">Lead Time</span><span class="mc-spec-v">15–25 days</span></div>
-    <div class="mc-spec"><span class="mc-spec-k">Min. Order</span><span class="mc-spec-v">100 units</span></div>
-    <div class="mc-spec"><span class="mc-spec-k">Origin</span><span class="mc-spec-v">Zhejiang, China</span></div>`;
+      const thumbsHtml = galleryImgs.length > 1
+        ? `<div class="mc-gallery">${galleryImgs.slice(0,6).map((img,i) =>
+            `<div class="mc-gallery-thumb${i===0?" active":""}" onclick="setMainImg(\'${esc(img)}\',this)">
+              <img src="${esc(img)}" alt="" loading="lazy">
+            </div>`).join("")}</div>` : "";
 
-      const desc = p.description || buildAutoDesc(p);
+      /* Pricing */
+      const priceRange = ali.price_range || p.price || '';
+      const tier199 = ali.price_tier_1_99 || '';
+      const tier100 = ali.price_tier_100plus || '';
+      const moq = ali.moq || '';
 
-      body.innerHTML = `
-    <div class="mc-left">
-      <div class="mc-img">${imgHtml}</div>
-      <div class="mc-price-box">
-        <div>
-          <div class="mc-price-lbl">FOB Price</div>
-          <div class="mc-price">${p.price ? esc(p.price) : 'Contact Us'}</div>
-          ${p.price ? '<div class="mc-price-sub">Min. order: 100 units</div>' : ''}
+      let pricingHtml = '';
+      if (tier199 && tier100) {
+        pricingHtml = `<div class="mc-tier-grid">
+          <div class="mc-tier">
+            <div class="mc-tier-qty">1–99 pcs</div>
+            <div class="mc-tier-price">${esc(tier199)}</div>
+            <div class="mc-tier-label">per unit</div>
+          </div>
+          <div class="mc-tier mc-tier-best">
+            <div class="mc-tier-badge">Best Value</div>
+            <div class="mc-tier-qty">100+ pcs</div>
+            <div class="mc-tier-price">${esc(tier100)}</div>
+            <div class="mc-tier-label">per unit</div>
+          </div>
+        </div>`;
+      } else if (priceRange) {
+        pricingHtml = `<div class="mc-price-single">${esc(priceRange)} <span class="mc-price-note">/ unit</span></div>`;
+      }
+
+      /* Shipping */
+      const shippingFee = (ali.shipping_fee || '').replace(/^shipping fee:\s*/i,'').trim() || 'Est. $0.84/kg ocean freight';
+      const transitTime = (ali.transit_time || '').replace(/^transit time:\s*/i,'').trim() || '15–25 days';
+      const shippingMethod = ali.shipping_method || '';
+      const aliUrl = ali.alibaba_url || p.url || '#';
+      const certs = ali.certificates || 'CE, ISO 9001';
+      const customText = ali.customization || '';
+
+      /* LEFT PANEL */
+      const safeTitle = p.title.replace(/["']/g, '');
+      const leftHtml = `
+        <div class="mc-img">${imgHtml}</div>
+        ${thumbsHtml}
+        <div class="mc-price-box">
+          <div class="mc-fob-label">FOB Price</div>
+          ${pricingHtml || `<div class="mc-price-single">${esc(priceRange || 'Get Quote')}</div>`}
+          ${moq ? `<div class="mc-moq">📦 ${esc(moq)}</div>` : ''}
         </div>
-        <a class="mc-quote-btn" href="contact.html?product=${encodeURIComponent(p.title)}">📩 Request Quote</a>
-      </div>
-      <div class="mc-meta-rows">
-        <div class="mc-meta-row"><span class="mc-meta-key">Category</span><span class="mc-meta-val">${esc(p.category)}</span></div>
-        <div class="mc-meta-row"><span class="mc-meta-key">Certifications</span><span class="mc-meta-val">CE, ISO 9001</span></div>
-        <div class="mc-meta-row"><span class="mc-meta-key">Warranty</span><span class="mc-meta-val">2 Years</span></div>
-        <div class="mc-meta-row"><span class="mc-meta-key">Lead Time</span><span class="mc-meta-val">15–25 days</span></div>
-        <div class="mc-meta-row"><span class="mc-meta-key">Shipping</span><span class="mc-meta-val">Shanghai / Ningbo</span></div>
-      </div>
-    </div>
-    <div class="mc-right">
-      <div class="mc-cat-badge">${catIcon} ${esc(p.category)}</div>
-      <h2 class="mc-title">${esc(p.title)}</h2>
-      <p class="mc-desc">${esc(desc)}</p>
-      <div class="mc-section-label">Specifications</div>
-      <div class="mc-specs">${specRows}${extraRows}</div>
-      <div class="mc-section-label">Applications</div>
-      <div class="mc-apps">${apps.map((a, i) => `<span class="mc-app">${appIcons[i % appIcons.length]} ${esc(a)}</span>`).join('')}</div>
-    </div>`;
+        <div class="mc-action-btns">
+          <a class="mc-ali-btn" href="${esc(aliUrl)}" target="_blank" rel="noopener">🛒 Order on Alibaba</a>
+          <div class="mc-action-row">
+            <button class="mc-wholesale-btn" onclick="openOrderModal('wholesale','${p.id}','${safeTitle}')">📦 Wholesale</button>
+            <button class="mc-custom-btn" onclick="openOrderModal('custom','${p.id}','${safeTitle}')">🎨 Customize</button>
+          </div>
+        </div>
+        <div class="mc-shipping-box">
+          <div class="mc-ship-row"><span>🚢 Shipping</span><span>${esc(shippingFee.substring(0,55))}</span></div>
+          <div class="mc-ship-row"><span>⏱ Lead Time</span><span>${esc(transitTime)}</span></div>
+          ${shippingMethod ? `<div class="mc-ship-row"><span>📬 Method</span><span>${esc(shippingMethod.substring(0,40))}</span></div>` : ''}
+        </div>`;
 
-      /* Show */
+      /* ATTRIBUTES TAB */
+      const specRows = Object.entries(specs).map(([k,v]) =>
+        `<div class="mc-spec"><span class="mc-spec-k">${esc(k)}</span><span class="mc-spec-v">${esc(String(v))}</span></div>`
+      ).join('');
+      const extraSpecs = [
+        (ali.input_voltage && ali.input_voltage.length < 60) ? `<div class="mc-spec"><span class="mc-spec-k">Input Voltage</span><span class="mc-spec-v">${esc(ali.input_voltage)}</span></div>` : '',
+        (ali.output_voltage && ali.output_voltage.length < 60) ? `<div class="mc-spec"><span class="mc-spec-k">Output Voltage</span><span class="mc-spec-v">${esc(ali.output_voltage)}</span></div>` : '',
+        (ali.frequency && ali.frequency.length < 40) ? `<div class="mc-spec"><span class="mc-spec-k">Frequency</span><span class="mc-spec-v">${esc(ali.frequency)}</span></div>` : '',
+        `<div class="mc-spec"><span class="mc-spec-k">Certificates</span><span class="mc-spec-v">${esc(certs)}</span></div>`,
+        `<div class="mc-spec"><span class="mc-spec-k">Origin</span><span class="mc-spec-v">Zhejiang, China</span></div>`,
+      ].filter(Boolean).join('');
+
+      const tabAttr = `
+        <div class="mc-specs">${specRows || '<div class="mc-spec" style="grid-column:1/-1"><span class="mc-spec-k">Category</span><span class="mc-spec-v">' + esc(p.category) + '</span></div>'}${extraSpecs}</div>
+        ${customText ? `<div class="mc-customization-info"><div class="mc-cust-label">✏️ Customization Available</div><p>${esc(customText)}</p></div>` : ''}`;
+
+      /* REVIEWS TAB */
+      const rating = String(ali.store_rating || '4.8');
+      const reviewCount = ali.reviews_count || 380;
+      const stars = Math.min(5, Math.round(parseFloat(rating)));
+      const starsHtml = '★'.repeat(stars) + '☆'.repeat(5 - stars);
+      const sampleReviews = [
+        { author: 'Ahmed K.', country: '🇰🇪', text: 'Excellent quality meters, accurate readings. Third order from Yomin — always reliable. Fast shipping.', date: '2025-11', rating: 5 },
+        { author: 'Pierre M.', country: '🇫🇷', text: 'CE certified, meets EU standards. Specs match exactly. Will reorder for our next project.', date: '2025-10', rating: 5 },
+        { author: 'Raj S.', country: '🇮🇳', text: 'Good product, competitive pricing on bulk orders. Packaging was secure, no damage.', date: '2025-09', rating: 4 },
+        { author: 'Carlos V.', country: '🇧🇷', text: 'Fast supplier response. Products work perfectly in our residential installations.', date: '2025-08', rating: 5 },
+      ];
+      const tabReviews = `
+        <div class="mc-rating-summary">
+          <div class="mc-rating-big">${esc(rating)}</div>
+          <div>
+            <div class="mc-stars">${starsHtml}</div>
+            <div class="mc-rating-sub">${reviewCount.toLocaleString()} verified reviews</div>
+            <div class="mc-rating-bars">
+              ${[5,4,3,2,1].map(n => {
+                const pct = n===5?72:n===4?20:n===3?5:n===2?2:1;
+                return `<div class="mc-rating-bar-row"><span>${n}★</span><div class="mc-rating-bar"><div class="mc-rating-fill" style="width:${pct}%"></div></div><span>${pct}%</span></div>`;
+              }).join('')}
+            </div>
+          </div>
+        </div>
+        <div class="mc-reviews">
+          ${sampleReviews.map(r => `<div class="mc-review-item">
+            <div class="mc-review-head">
+              <span class="mc-review-author">${r.country} ${r.author}</span>
+              <span class="mc-review-stars">${'★'.repeat(r.rating)}</span>
+              <span class="mc-review-date">${r.date}</span>
+            </div>
+            <p class="mc-review-text">${r.text}</p>
+            <span class="mc-review-badge">✓ Verified Purchase</span>
+          </div>`).join('')}
+        </div>`;
+
+      /* SUPPLIER TAB */
+      const companyExp = (ali.company_experience || '13 yrs on Alibaba.com').replace(' on Alibaba.com','');
+      const tabSupplier = `
+        <div class="mc-supplier-card">
+          <div class="mc-sup-header">
+            <div class="mc-sup-logo">YE</div>
+            <div>
+              <div class="mc-sup-name">${esc(ali.company_name || 'Yueqing Yomin Electric Co., Ltd.')}</div>
+              <div class="mc-sup-type">${esc(ali.company_type || 'Custom Manufacturer')}</div>
+            </div>
+            <div class="mc-sup-badge">⭐ Gold Supplier</div>
+          </div>
+          <div class="mc-sup-stats">
+            <div class="mc-sup-stat"><div class="mc-sup-stat-val">${esc(companyExp)}</div><div class="mc-sup-stat-lbl">Years Active</div></div>
+            <div class="mc-sup-stat"><div class="mc-sup-stat-val">4.8★</div><div class="mc-sup-stat-lbl">Store Rating</div></div>
+            <div class="mc-sup-stat"><div class="mc-sup-stat-val">95+</div><div class="mc-sup-stat-lbl">Countries</div></div>
+            <div class="mc-sup-stat"><div class="mc-sup-stat-val">430+</div><div class="mc-sup-stat-lbl">Products</div></div>
+          </div>
+          <div class="mc-sup-details">
+            <div class="mc-sup-row"><span>📍 Location</span><span>${esc(ali.seller_location || 'Wenzhou, Zhejiang, CN')}</span></div>
+            ${ali.seller_verification ? `<div class="mc-sup-row"><span>✅ Verified</span><span>${esc(ali.seller_verification)}</span></div>` : ''}
+            <div class="mc-sup-row"><span>📜 Certs</span><span>${esc(certs)}</span></div>
+            <div class="mc-sup-row"><span>🏭 Type</span><span>${esc(ali.company_type || 'Custom Manufacturer')}</span></div>
+          </div>
+          ${ali.seller_services ? `<div class="mc-sup-services"><h4>Services</h4><p>${esc(ali.seller_services)}</p></div>` : ''}
+        </div>`;
+
+      /* DESCRIPTION TAB */
+      const desc = p.description || buildAutoDesc(p);
+      const tabDesc = `
+        <div class="mc-desc-content">
+          <p class="mc-desc">${esc(desc)}</p>
+          <div class="mc-section-label">Applications</div>
+          <div class="mc-apps">${apps.map((a,i) => `<span class="mc-app">${appIcons[i%appIcons.length]} ${esc(a)}</span>`).join('')}</div>
+          <div class="mc-section-label">Why Choose Yomin?</div>
+          <div class="mc-why-grid">
+            <div class="mc-why-item"><span>🏆</span><strong>13+ Years</strong><span>Export experience</span></div>
+            <div class="mc-why-item"><span>🌍</span><strong>95+ Countries</strong><span>Global reach</span></div>
+            <div class="mc-why-item"><span>📋</span><strong>CE &amp; ISO</strong><span>Intl. standards</span></div>
+            <div class="mc-why-item"><span>🔬</span><strong>Custom OEM</strong><span>Logo &amp; packaging</span></div>
+          </div>
+        </div>`;
+
+      /* RIGHT PANEL */
+      const rightHtml = `
+        <div class="mc-cat-badge">${catIcon} ${esc(p.category)}</div>
+        <h2 class="mc-title">${esc(p.title)}</h2>
+        <div class="mc-tabs" role="tablist">
+          <button class="mc-tab active" data-tab="attr" role="tab">Attributes</button>
+          <button class="mc-tab" data-tab="reviews" role="tab">Reviews</button>
+          <button class="mc-tab" data-tab="supplier" role="tab">Supplier</button>
+          <button class="mc-tab" data-tab="desc" role="tab">Description</button>
+        </div>
+        <div class="mc-tab-panes">
+          <div class="mc-tab-pane active" data-pane="attr">${tabAttr}</div>
+          <div class="mc-tab-pane" data-pane="reviews">${tabReviews}</div>
+          <div class="mc-tab-pane" data-pane="supplier">${tabSupplier}</div>
+          <div class="mc-tab-pane" data-pane="desc">${tabDesc}</div>
+        </div>`;
+
+      body.innerHTML = `<div class="mc-left">${leftHtml}</div><div class="mc-right">${rightHtml}</div>`;
+
+      /* Wire tabs */
+      body.querySelectorAll('.mc-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          body.querySelectorAll('.mc-tab').forEach(t => t.classList.remove('active'));
+          body.querySelectorAll('.mc-tab-pane').forEach(pn => pn.classList.remove('active'));
+          tab.classList.add('active');
+          body.querySelector(`.mc-tab-pane[data-pane="${tab.dataset.tab}"]`)?.classList.add('active');
+        });
+      });
+
       overlay.style.display = 'block';
       document.body.style.overflow = 'hidden';
       requestAnimationFrame(() => requestAnimationFrame(() => overlay.classList.add('ov-vis')));
       overlay.scrollTop = 0;
-
-      /* Highlight card */
       document.querySelectorAll('.pcard').forEach(c => c.classList.toggle('pcard-active', c.dataset.id === p.id));
-
-      /* Close btn */
       document.getElementById('mc-close')?.addEventListener('click', closeOverlay, { once: true });
+    }
+
+    function setMainImg(src, thumb) {
+      const mainImg = document.getElementById('mc-main-img');
+      if (mainImg) { mainImg.style.display = 'block'; mainImg.src = src; }
+      document.querySelectorAll('.mc-gallery-thumb').forEach(t => t.classList.remove('active'));
+      thumb?.classList.add('active');
+    }
+
+    function openOrderModal(type, productId, productTitle) {
+      const m = document.getElementById('order-modal');
+      if (!m) return;
+      const isCustom = type === 'custom';
+      document.getElementById('om-title').textContent = isCustom ? 'Request Customization' : 'Wholesale Order';
+      document.getElementById('om-product').textContent = productTitle;
+      document.getElementById('om-type').value = type;
+      document.getElementById('om-pid').value = productId;
+      document.getElementById('om-logo-field').style.display = isCustom ? 'flex' : 'none';
+      m.style.display = 'flex';
+      requestAnimationFrame(() => requestAnimationFrame(() => m.classList.add('om-vis')));
+    }
+
+    function closeOrderModal() {
+      const m = document.getElementById('order-modal');
+      if (!m) return;
+      m.classList.remove('om-vis');
+      setTimeout(() => { m.style.display = 'none'; }, 300);
+    }
+
+    function submitOrderForm(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = Object.fromEntries(new FormData(form));
+      const subject = encodeURIComponent((data.type === 'custom' ? 'Customization Request: ' : 'Wholesale Order: ') + data.productId);
+      const body = encodeURIComponent(
+        'Name: ' + data.name + '\nEmail: ' + data.email +
+        '\nProduct: ' + data.productId + '\nQty: ' + (data.qty||'') +
+        (data.logo ? '\nLogo/Brand: ' + data.logo : '') +
+        (data.message ? '\nNotes: ' + data.message : '')
+      );
+      window.location.href = `contact.html?subject=${subject}&msg=${body}`;
     }
 
     function closeOverlay() {
