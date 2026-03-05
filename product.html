@@ -1335,7 +1335,7 @@
     .mc-ship-row span:first-child { color: var(--mt); flex-shrink: 0 }
     .mc-ship-row span:last-child { color: var(--tx); text-align: right; font-size: 11px }
     .mc-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px }
-    .mc-spec { display: flex; flex-direction: column; gap: 2px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.04) }
+    .mc-spec { display: flex; flex-direction: column; gap: 2px; padding: 11px 16px; border-bottom: 1px solid rgba(255,255,255,.04) }
     .mc-spec-k { font-size: 11px; color: var(--mt); text-transform: uppercase; letter-spacing: .5px }
     .mc-spec-v { font-size: 13px; color: var(--tx); font-weight: 500 }
     .mc-attr-raw { margin-top: 16px; padding: 12px; background: var(--bgc2); border-radius: 8px }
@@ -1947,9 +1947,10 @@
       const apps = CAT_APPS[p.category] || CAT_APPS['Other'];
       const appIcons = ['🏠','🏪','⚡','🏭','🌐','🔌','📡','🔧'];
 
-      /* Gallery images */
+      /* Gallery images - filter out CE/certification images */
       const galleryImgs = (ali.images && ali.images.length)
-        ? ali.images : (p.image ? [p.image] : []);
+        ? ali.images.filter(img => !img.toLowerCase().includes('ce') && !img.toLowerCase().includes('certif') && !img.toLowerCase().includes('logo'))
+        : (p.image ? [p.image] : []);
       const mainImg = galleryImgs[0] || '';
 
       const imgHtml = mainImg
