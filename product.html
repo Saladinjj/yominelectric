@@ -620,7 +620,7 @@
 
     .pcard-img {
       aspect-ratio: 1;
-      background: var(--bgc2);
+      background: #ffffff;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -630,7 +630,10 @@
     .pcard-img img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      padding: 12px;
+      box-sizing: border-box;
+      mix-blend-mode: multiply;
       transition: transform .4s;
       display: block
     }
@@ -645,7 +648,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--bgc2)
+      background: #f5f5f5
     }
 
     .pcard-body {
