@@ -522,6 +522,64 @@
       letter-spacing: .5px
     }
 
+    .prod-search-wrap {
+      position: relative;
+      flex: 1;
+      max-width: 320px;
+      min-width: 160px
+    }
+
+    .prod-search {
+      width: 100%;
+      padding: 8px 32px 8px 34px;
+      background: var(--bgc2);
+      border: 1px solid var(--bds);
+      border-radius: 8px;
+      color: var(--tx);
+      font-size: 12px;
+      font-family: var(--ss);
+      outline: none;
+      transition: border-color .2s;
+      box-sizing: border-box
+    }
+
+    .prod-search:focus {
+      border-color: rgba(200, 169, 110, .35)
+    }
+
+    .prod-search::placeholder {
+      color: var(--dm)
+    }
+
+    .prod-search-ic {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 13px;
+      opacity: .45
+    }
+
+    .prod-search-clear {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--dm);
+      font-size: 14px;
+      cursor: pointer;
+      padding: 0 2px;
+      line-height: 1;
+      display: none
+    }
+
+    .prod-search-clear.vis {
+      display: block
+    }
+
     .sort-wrap {
       position: relative
     }
@@ -1509,6 +1567,11 @@
           <div class="prod-area-title" id="area-title" data-t="prod_all">All Products</div>
           <div class="prod-meta" id="area-meta">Loading…</div>
         </div>
+        <div class="prod-search-wrap">
+          <span class="prod-search-ic">🔍</span>
+          <input class="prod-search" id="prod-search" type="search" placeholder="Search products…" autocomplete="off">
+          <button class="prod-search-clear" id="prod-search-clear" aria-label="Clear search">✕</button>
+        </div>
         <div class="sort-wrap">
           <button class="sort-btn" id="sort-btn" data-t="prod_sort">Sort <svg width="10" height="10" viewBox="0 0 10 10"
               fill="currentColor">
@@ -1725,7 +1788,7 @@
       const urlCat = params.get('cat') || params.get('category');
       if (urlCat && urlCat !== 'all') activeFilter = decodeURIComponent(urlCat);
 
-      buildSidebar(); buildMobileFilter(); initSbSearch(); initSort(); initLoadMore();
+      buildSidebar(); buildMobileFilter(); initSbSearch(); initProdSearch(); initSort(); initLoadMore();
       applyAndRender();
 
       /* Rebuild sidebar/mobile filter when language changes */
@@ -1808,6 +1871,7 @@
     function setFilter(val) {
       activeFilter = val; searchQuery = '';
       const sb = document.getElementById('sb-search'); if (sb) sb.value = '';
+      const ps = document.getElementById('prod-search'); if (ps) { ps.value = ''; toggleClear(ps); }
       document.querySelectorAll('.sb-item,.sb-all').forEach(b => b.classList.toggle('active', b.dataset.filter === val));
       document.querySelectorAll('.mfbtn').forEach(b => b.classList.toggle('active', b.dataset.filter === val));
       const t = document.getElementById('area-title');
@@ -1831,7 +1895,33 @@
 
     function initSbSearch() {
       const sb = document.getElementById('sb-search'); if (!sb) return;
-      sb.addEventListener('input', e => { searchQuery = e.target.value.trim().toLowerCase(); shown = PAGE; applyAndRender(); });
+      sb.addEventListener('input', e => {
+        searchQuery = e.target.value.trim().toLowerCase();
+        const ps = document.getElementById('prod-search'); if (ps) { ps.value = e.target.value; toggleClear(ps); }
+        shown = PAGE; applyAndRender();
+      });
+    }
+
+    function toggleClear(inp) {
+      const btn = document.getElementById('prod-search-clear'); if (!btn) return;
+      btn.classList.toggle('vis', inp.value.length > 0);
+    }
+
+    function initProdSearch() {
+      const inp = document.getElementById('prod-search'); if (!inp) return;
+      const clr = document.getElementById('prod-search-clear');
+      inp.addEventListener('input', e => {
+        searchQuery = e.target.value.trim().toLowerCase();
+        const sb = document.getElementById('sb-search'); if (sb) sb.value = e.target.value;
+        toggleClear(inp);
+        shown = PAGE; applyAndRender();
+      });
+      if (clr) clr.addEventListener('click', () => {
+        inp.value = ''; searchQuery = '';
+        const sb = document.getElementById('sb-search'); if (sb) sb.value = '';
+        toggleClear(inp);
+        shown = PAGE; applyAndRender(); inp.focus();
+      });
     }
 
     /* ── SORT ── */
