@@ -12,7 +12,33 @@
       "Display": "LED"
     },
     "image": "https://s.alicdn.com/@sc04/kf/H98e7d72c5b7b402a9390e3ecaad1d888G/4SVC-TNS-Series-Home-Use-Fully-Automatic.jpg?hasNWGrade=1",
-    "url": "https://www.alibaba.com/product-detail/4SVC-TNS-Series-Home-Use-Fully_1600972979732.html"
+    "url": "https://www.alibaba.com/product-detail/4SVC-TNS-Series-Home-Use-Fully_1600972979732.html",
+    "bundles": [
+      {
+        "id": "basic",
+        "name": "Basic Set",
+        "description": "Essential components for standard installation",
+        "price": "$1,200",
+        "features": ["10 units", "Basic documentation", "1-year warranty"],
+        "recommended": false
+      },
+      {
+        "id": "professional",
+        "name": "Professional Set",
+        "description": "Complete package for professional installers",
+        "price": "$2,500",
+        "features": ["25 units", "Full documentation", "Installation guide", "3-year warranty"],
+        "recommended": true
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise Set",
+        "description": "Comprehensive solution for large deployments",
+        "price": "$5,000",
+        "features": ["50 units", "Priority support", "Custom branding", "5-year warranty", "Training session"],
+        "recommended": false
+      }
+    ]
   },
   {
     "id": "ym-0003",
@@ -453,7 +479,33 @@
       "Display": "Digital"
     },
     "image": "https://s.alicdn.com/@sc04/kf/H494ec4dbcebf47dea716e8d2cda5fa6eW/Digital-Only-3-5-80A-7P-Three.png?hasNWGrade=1",
-    "url": "https://www.alibaba.com/product-detail/Digital-Only-3-5-80A-7P_1601118704044.html"
+    "url": "https://www.alibaba.com/product-detail/Digital-Only-3-5-80A-7P_1601118704044.html",
+    "bundles": [
+      {
+        "id": "basic",
+        "name": "Basic Set",
+        "description": "Essential monitoring package for small installations",
+        "price": "$800",
+        "features": ["5 units", "Basic monitoring", "1-year warranty"],
+        "recommended": false
+      },
+      {
+        "id": "professional",
+        "name": "Professional Set",
+        "description": "Advanced analytics package for professional installers",
+        "price": "$1,800",
+        "features": ["15 units", "Advanced analytics", "Installation guide", "3-year warranty"],
+        "recommended": true
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise Set",
+        "description": "Comprehensive solution for large-scale deployments",
+        "price": "$3,500",
+        "features": ["30 units", "Priority support", "API access", "Custom reporting", "5-year warranty"],
+        "recommended": false
+      }
+    ]
   },
   {
     "id": "ym-0059",
@@ -535,7 +587,33 @@
       "Current Type": "AC"
     },
     "image": "https://s.alicdn.com/@sc04/kf/Hf8c45515825f4222a82095f76f936d8dw/Current-Sense-transformers-3kV-AC-1min-1600.jpg.jpg?hasNWGrade=1",
-    "url": "https://www.alibaba.com/product-detail/Current-Sense-transformers-3kV-AC-1min_60080064971.html"
+    "url": "https://www.alibaba.com/product-detail/Current-Sense-transformers-3kV-AC-1min_60080064971.html",
+    "bundles": [
+      {
+        "id": "basic",
+        "name": "Basic Set",
+        "description": "Standard current transformers for basic metering applications",
+        "price": "$200",
+        "features": ["20 units", "Basic documentation", "1-year warranty"],
+        "recommended": false
+      },
+      {
+        "id": "professional",
+        "name": "Professional Set",
+        "description": "Calibrated transformers for professional electrical installations",
+        "price": "$450",
+        "features": ["50 units", "Calibration certificate", "Installation guide", "3-year warranty"],
+        "recommended": true
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise Set",
+        "description": "Premium solution for large-scale industrial applications",
+        "price": "$850",
+        "features": ["100 units", "Priority support", "Custom packaging", "5-year warranty", "Technical training"],
+        "recommended": false
+      }
+    ]
   },
   {
     "id": "ym-0065",

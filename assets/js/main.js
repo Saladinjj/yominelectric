@@ -123,6 +123,7 @@ const T = {
     prod_load_more:'Load More', prod_no_results:'No products found',
     prod_desc:'Browse our complete range of energy meters, voltage stabilizers, current transformers, and accessories. CE certified. Trusted by buyers in 95+ countries.',
     prod_cat_energy_meter:'Energy Meters', prod_cat_voltage_stabilizer:'Voltage Stabilizers', prod_cat_current_transformer:'Current Transformers', prod_cat_variac:'Variac / Transformers', prod_cat_terminal:'Terminals & Connectors', prod_cat_solar:'Solar & PV', prod_cat_fuse:'Fuses & Protection', prod_cat_voltage_protector:'Voltage Protectors', prod_cat_socket:'Sockets & Wiring', prod_cat_tile:'Tile Leveling', prod_cat_tools:'Tools & Hardware', prod_cat_seal:'Security Seals', prod_cat_other:'Other Products',
+    bundle_package_options:'Package Options', bundle_quantity_pricing:'Quantity‑Based Pricing', bundle_select:'Select', bundle_selected:'Selected', bundle_recommended:'Recommended', bundle_number_of_sets:'Number of Sets',
   },
   fr: {
     nav_home:'Accueil', nav_products:'Produits', nav_solutions:'Solutions',

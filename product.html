@@ -1380,6 +1380,22 @@
     .mc-tier-qty { font-size: 11px; color: var(--mt); margin-bottom: 4px }
     .mc-tier-price { font-size: 17px; font-weight: 700; color: var(--ac); font-family: var(--sf) }
     .mc-tier-label { font-size: 10px; color: var(--mt) }
+    /* Bundle/Package Pricing */
+    .mc-bundle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px }
+    .mc-bundle { background: var(--bgc2); border: 1px solid var(--bds); border-radius: 12px; padding: 16px; position: relative; transition: border-color .2s, transform .1s }
+    .mc-bundle:hover { border-color: rgba(200,169,110,.3); transform: translateY(-2px) }
+    .mc-bundle-recommended { border-color: rgba(200,169,110,.5); background: rgba(200,169,110,.06) }
+    .mc-bundle-badge { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--ac); color: #000; font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 20px; white-space: nowrap }
+    .mc-bundle-name { font-size: 16px; font-weight: 700; color: var(--tx); margin-bottom: 8px }
+    .mc-bundle-desc { font-size: 12px; color: var(--mt); margin-bottom: 12px; line-height: 1.4 }
+    .mc-bundle-price { font-size: 20px; font-weight: 700; color: var(--ac); font-family: var(--sf); margin-bottom: 12px }
+    .mc-bundle-features { list-style: none; padding: 0; margin: 0 0 16px 0 }
+    .mc-bundle-feature { font-size: 11px; color: var(--mt); padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,.05) }
+    .mc-bundle-feature:last-child { border-bottom: none }
+    .mc-bundle-select { width: 100%; padding: 10px; background: var(--ac); color: #000; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-family: var(--ss); transition: opacity .2s }
+    .mc-bundle-select:hover { opacity: .85 }
+    .mc-bundle-selected { border-color: var(--ac); background: rgba(200,169,110,.1) }
+    .mc-bundle-selected .mc-bundle-select { background: #000; color: var(--ac) }
     .mc-price-single { font-size: 22px; font-weight: 700; color: var(--ac); font-family: var(--sf); margin-bottom: 6px }
     .mc-price-note { font-size: 13px; color: var(--mt); font-family: var(--ss); font-weight: 400 }
     .mc-moq { font-size: 12px; color: var(--mt); margin-top: 6px }
@@ -1466,8 +1482,8 @@
     .om-submit { padding: 13px; background: var(--ac); color: #000; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: var(--ss); transition: opacity .2s; margin-top: 6px }
     .om-submit:hover { opacity: .85 }
     .om-note { font-size: 11px; color: var(--mt); text-align: center; line-height: 1.5 }
-    @media(max-width:800px) { .mc-why-grid { grid-template-columns: repeat(2,1fr) } .mc-sup-stats { grid-template-columns: repeat(2,1fr) } .mc-rating-summary { flex-direction: column; gap: 14px } .mc-tier-grid { grid-template-columns: 1fr 1fr } .mc-tab { padding: 8px 12px; font-size: 12px } }
-    @media(max-width:480px) { .mc-why-grid { grid-template-columns: 1fr 1fr } .mc-action-row { grid-template-columns: 1fr 1fr } }
+    @media(max-width:800px) { .mc-why-grid { grid-template-columns: repeat(2,1fr) } .mc-sup-stats { grid-template-columns: repeat(2,1fr) } .mc-rating-summary { flex-direction: column; gap: 14px } .mc-tier-grid { grid-template-columns: 1fr 1fr } .mc-bundle-grid { grid-template-columns: repeat(2, 1fr) } .mc-tab { padding: 8px 12px; font-size: 12px } }
+    @media(max-width:480px) { .mc-why-grid { grid-template-columns: 1fr 1fr } .mc-action-row { grid-template-columns: 1fr 1fr } .mc-bundle-grid { grid-template-columns: 1fr } }
   </style>
 </head>
 
@@ -1675,6 +1691,7 @@
       <form class="om-form" onsubmit="submitOrderForm(event)">
         <input type="hidden" id="om-type" name="type" value="wholesale">
         <input type="hidden" id="om-pid" name="productId">
+        <input type="hidden" id="om-bundle" name="bundle">
         <div class="om-field">
           <label class="om-label" for="om-name">Your Name *</label>
           <input class="om-input" id="om-name" name="name" required placeholder="Full name">
@@ -2066,8 +2083,28 @@
       const moq = ali.moq || '';
 
       let pricingHtml = '';
+      let bundleHtml = '';
+      let tierHtml = '';
+      // Translation helper
+      const tr = (typeof T !== 'undefined' && typeof currentLang !== 'undefined' && T[currentLang]) ? T[currentLang] : null;
+      const t = (key, fallback) => tr && tr[key] !== undefined ? tr[key] : fallback;
+
+      // Generate bundle HTML if product has bundles
+      if (p.bundles && p.bundles.length > 0) {
+        bundleHtml = `<div class="mc-bundle-grid">${p.bundles.map(b => `
+          <div class="mc-bundle ${b.recommended ? 'mc-bundle-recommended' : ''}" data-bundle-id="${esc(b.id)}">
+            ${b.recommended ? `<div class="mc-bundle-badge">${t('bundle_recommended', 'Recommended')}</div>` : ''}
+            <div class="mc-bundle-name">${esc(b.name)}</div>
+            <div class="mc-bundle-desc">${esc(b.description)}</div>
+            <div class="mc-bundle-price">${esc(b.price)}</div>
+            <ul class="mc-bundle-features">${b.features.map(f => `<li class="mc-bundle-feature">${esc(f)}</li>`).join('')}</ul>
+            <button class="mc-bundle-select" onclick="selectBundle('${esc(p.id)}', '${esc(b.id)}', this)">${t('bundle_select', 'Select')}</button>
+          </div>`).join('')}</div>`;
+      }
+
+      // Generate tier HTML if tier pricing exists
       if (tier199 && tier100) {
-        pricingHtml = `<div class="mc-tier-grid">
+        tierHtml = `<div class="mc-tier-grid">
           <div class="mc-tier">
             <div class="mc-tier-qty">1–99 pcs</div>
             <div class="mc-tier-price">${esc(tier199)}</div>
@@ -2081,7 +2118,24 @@
           </div>
         </div>`;
       } else if (priceRange) {
-        pricingHtml = `<div class="mc-price-single">${esc(priceRange)} <span class="mc-price-note">/ unit</span></div>`;
+        tierHtml = `<div class="mc-price-single">${esc(priceRange)} <span class="mc-price-note">/ unit</span></div>`;
+      }
+
+      // Combine bundle and tier HTML
+      if (bundleHtml && tierHtml) {
+        pricingHtml = `<div class="mc-pricing-section">
+          <div class="mc-section-label">${t('bundle_package_options', 'Package Options')}</div>
+          ${bundleHtml}
+          <div class="mc-section-label" style="margin-top: 24px">${t('bundle_quantity_pricing', 'Quantity‑Based Pricing')}</div>
+          ${tierHtml}
+        </div>`;
+      } else if (bundleHtml) {
+        pricingHtml = `<div class="mc-pricing-section">
+          <div class="mc-section-label">${t('bundle_package_options', 'Package Options')}</div>
+          ${bundleHtml}
+        </div>`;
+      } else if (tierHtml) {
+        pricingHtml = tierHtml;
       }
 
       /* Shipping */
@@ -2255,6 +2309,24 @@
       thumb?.classList.add('active');
     }
 
+    function selectBundle(productId, bundleId, button) {
+      // Remove selected class from all bundles for this product
+      const overlay = document.getElementById('product-overlay');
+      if (!overlay) return;
+      overlay.querySelectorAll('.mc-bundle').forEach(b => b.classList.remove('mc-bundle-selected'));
+      // Add selected class to clicked bundle
+      const bundleEl = button.closest('.mc-bundle');
+      bundleEl.classList.add('mc-bundle-selected');
+
+      // Store selected bundle in data attribute on overlay
+      overlay.dataset.selectedBundle = bundleId;
+      overlay.dataset.selectedProduct = productId;
+
+      // Update bundle button text
+      button.textContent = (typeof T !== 'undefined' && typeof currentLang !== 'undefined' && T[currentLang] && T[currentLang].bundle_selected) ? T[currentLang].bundle_selected : 'Selected';
+      button.disabled = true;
+    }
+
     function openOrderModal(type, productId, productTitle) {
       const m = document.getElementById('order-modal');
       if (!m) return;
@@ -2264,6 +2336,23 @@
       document.getElementById('om-type').value = type;
       document.getElementById('om-pid').value = productId;
       document.getElementById('om-logo-field').style.display = isCustom ? 'flex' : 'none';
+
+      // Handle bundle selection
+      const overlay = document.getElementById('product-overlay');
+      let selectedBundleId = '';
+      if (overlay && overlay.dataset.selectedProduct === productId && overlay.dataset.selectedBundle) {
+        selectedBundleId = overlay.dataset.selectedBundle;
+        // Update quantity label to reflect bundle multiplier
+        const qtyLabel = document.querySelector('label[for="om-qty"]');
+        if (qtyLabel) qtyLabel.textContent = 'Number of Sets *';
+        // Optional: show bundle info somewhere
+      } else {
+        // Reset quantity label
+        const qtyLabel = document.querySelector('label[for="om-qty"]');
+        if (qtyLabel) qtyLabel.textContent = 'Quantity *';
+      }
+      document.getElementById('om-bundle').value = selectedBundleId;
+
       m.style.display = 'flex';
       requestAnimationFrame(() => requestAnimationFrame(() => m.classList.add('om-vis')));
     }
@@ -2282,7 +2371,8 @@
       const subject = encodeURIComponent((data.type === 'custom' ? 'Customization Request: ' : 'Wholesale Order: ') + data.productId);
       const body = encodeURIComponent(
         'Name: ' + data.name + '\nEmail: ' + data.email +
-        '\nProduct: ' + data.productId + '\nQty: ' + (data.qty||'') +
+        '\nProduct: ' + data.productId + (data.bundle ? '\nBundle: ' + data.bundle : '') +
+        '\nQty: ' + (data.qty||'') +
         (data.logo ? '\nLogo/Brand: ' + data.logo : '') +
         (data.message ? '\nNotes: ' + data.message : '')
       );
