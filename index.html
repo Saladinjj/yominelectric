@@ -267,8 +267,9 @@ body.light .tpbtn-act{background:rgba(184,148,26,.15) !important;border-color:rg
 .gr-region{background:var(--bgc);border:1px solid var(--bds);border-radius:16px;padding:22px 24px}
 .gr-reg-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ac);margin-bottom:14px;font-weight:600}
 .gr-countries{display:flex;flex-wrap:wrap;gap:7px}
-.gr-country{font-size:12px;color:var(--tx);background:rgba(255,255,255,.04);border:1px solid var(--bds);padding:5px 10px;border-radius:20px;white-space:nowrap;transition:border-color .2s,background .2s}
+.gr-country{font-size:12px;color:var(--tx);background:rgba(255,255,255,.04);border:1px solid var(--bds);padding:5px 10px;border-radius:20px;white-space:nowrap;transition:border-color .2s,background .2s;display:inline-flex;align-items:center;gap:6px}
 .gr-country:hover{border-color:rgba(200,169,110,.3);background:rgba(200,169,110,.06)}
+.gr-country-flag{width:16px;height:12px;border-radius:1px;object-fit:cover;flex-shrink:0}
 /* STORE LINKS */
 .store-sec{background:var(--bgc);border-top:1px solid var(--bds);padding:70px 60px;text-align:center}
 .store-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:44px auto 0}
@@ -611,85 +612,85 @@ body.light .mob-x{color:#555}
     <div class="gr-region">
       <div class="gr-reg-label">Africa</div>
       <div class="gr-countries">
-        <span class="gr-country">🇳🇬 Nigeria</span>
-        <span class="gr-country">🇰🇪 Kenya</span>
-        <span class="gr-country">🇿🇦 South Africa</span>
-        <span class="gr-country">🇪🇹 Ethiopia</span>
-        <span class="gr-country">🇬🇭 Ghana</span>
-        <span class="gr-country">🇹🇿 Tanzania</span>
-        <span class="gr-country">🇪🇬 Egypt</span>
-        <span class="gr-country">🇲🇦 Morocco</span>
-        <span class="gr-country">🇩🇿 Algeria</span>
-        <span class="gr-country">🇦🇴 Angola</span>
-        <span class="gr-country">🇺🇬 Uganda</span>
-        <span class="gr-country">🇸🇩 Sudan</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ng.png" alt="Nigeria flag" class="gr-country-flag" onerror="this.style.display='none'"> Nigeria</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ke.png" alt="Kenya flag" class="gr-country-flag" onerror="this.style.display='none'"> Kenya</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/za.png" alt="South Africa flag" class="gr-country-flag" onerror="this.style.display='none'"> South Africa</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/et.png" alt="Ethiopia flag" class="gr-country-flag" onerror="this.style.display='none'"> Ethiopia</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/gh.png" alt="Ghana flag" class="gr-country-flag" onerror="this.style.display='none'"> Ghana</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/tz.png" alt="Tanzania flag" class="gr-country-flag" onerror="this.style.display='none'"> Tanzania</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/eg.png" alt="Egypt flag" class="gr-country-flag" onerror="this.style.display='none'"> Egypt</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ma.png" alt="Morocco flag" class="gr-country-flag" onerror="this.style.display='none'"> Morocco</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/dz.png" alt="Algeria flag" class="gr-country-flag" onerror="this.style.display='none'"> Algeria</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ao.png" alt="Angola flag" class="gr-country-flag" onerror="this.style.display='none'"> Angola</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ug.png" alt="Uganda flag" class="gr-country-flag" onerror="this.style.display='none'"> Uganda</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/sd.png" alt="Sudan flag" class="gr-country-flag" onerror="this.style.display='none'"> Sudan</span>
       </div>
     </div>
     <div class="gr-region">
       <div class="gr-reg-label">Middle East</div>
       <div class="gr-countries">
-        <span class="gr-country">🇦🇪 UAE</span>
-        <span class="gr-country">🇸🇦 Saudi Arabia</span>
-        <span class="gr-country">🇮🇶 Iraq</span>
-        <span class="gr-country">🇯🇴 Jordan</span>
-        <span class="gr-country">🇴🇲 Oman</span>
-        <span class="gr-country">🇶🇦 Qatar</span>
-        <span class="gr-country">🇾🇪 Yemen</span>
-        <span class="gr-country">🇰🇼 Kuwait</span>
-        <span class="gr-country">🇱🇧 Lebanon</span>
-        <span class="gr-country">🇸🇾 Syria</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ae.png" alt="UAE flag" class="gr-country-flag" onerror="this.style.display='none'"> UAE</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/sa.png" alt="Saudi Arabia flag" class="gr-country-flag" onerror="this.style.display='none'"> Saudi Arabia</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/iq.png" alt="Iraq flag" class="gr-country-flag" onerror="this.style.display='none'"> Iraq</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/jo.png" alt="Jordan flag" class="gr-country-flag" onerror="this.style.display='none'"> Jordan</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/om.png" alt="Oman flag" class="gr-country-flag" onerror="this.style.display='none'"> Oman</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/qa.png" alt="Qatar flag" class="gr-country-flag" onerror="this.style.display='none'"> Qatar</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ye.png" alt="Yemen flag" class="gr-country-flag" onerror="this.style.display='none'"> Yemen</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/kw.png" alt="Kuwait flag" class="gr-country-flag" onerror="this.style.display='none'"> Kuwait</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/lb.png" alt="Lebanon flag" class="gr-country-flag" onerror="this.style.display='none'"> Lebanon</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/sy.png" alt="Syria flag" class="gr-country-flag" onerror="this.style.display='none'"> Syria</span>
       </div>
     </div>
     <div class="gr-region">
       <div class="gr-reg-label">South &amp; SE Asia</div>
       <div class="gr-countries">
-        <span class="gr-country">🇮🇳 India</span>
-        <span class="gr-country">🇵🇰 Pakistan</span>
-        <span class="gr-country">🇻🇳 Vietnam</span>
-        <span class="gr-country">🇮🇩 Indonesia</span>
-        <span class="gr-country">🇵🇭 Philippines</span>
-        <span class="gr-country">🇲🇾 Malaysia</span>
-        <span class="gr-country">🇧🇩 Bangladesh</span>
-        <span class="gr-country">🇹🇭 Thailand</span>
-        <span class="gr-country">🇱🇰 Sri Lanka</span>
-        <span class="gr-country">🇰🇭 Cambodia</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/in.png" alt="India flag" class="gr-country-flag" onerror="this.style.display='none'"> India</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/pk.png" alt="Pakistan flag" class="gr-country-flag" onerror="this.style.display='none'"> Pakistan</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/vn.png" alt="Vietnam flag" class="gr-country-flag" onerror="this.style.display='none'"> Vietnam</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/id.png" alt="Indonesia flag" class="gr-country-flag" onerror="this.style.display='none'"> Indonesia</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ph.png" alt="Philippines flag" class="gr-country-flag" onerror="this.style.display='none'"> Philippines</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/my.png" alt="Malaysia flag" class="gr-country-flag" onerror="this.style.display='none'"> Malaysia</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/bd.png" alt="Bangladesh flag" class="gr-country-flag" onerror="this.style.display='none'"> Bangladesh</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/th.png" alt="Thailand flag" class="gr-country-flag" onerror="this.style.display='none'"> Thailand</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/lk.png" alt="Sri Lanka flag" class="gr-country-flag" onerror="this.style.display='none'"> Sri Lanka</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/kh.png" alt="Cambodia flag" class="gr-country-flag" onerror="this.style.display='none'"> Cambodia</span>
       </div>
     </div>
     <div class="gr-region">
       <div class="gr-reg-label">Europe &amp; CIS</div>
       <div class="gr-countries">
-        <span class="gr-country">🇷🇺 Russia</span>
-        <span class="gr-country">🇩🇪 Germany</span>
-        <span class="gr-country">🇬🇧 United Kingdom</span>
-        <span class="gr-country">🇫🇷 France</span>
-        <span class="gr-country">🇵🇱 Poland</span>
-        <span class="gr-country">🇺🇦 Ukraine</span>
-        <span class="gr-country">🇷🇴 Romania</span>
-        <span class="gr-country">🇧🇬 Bulgaria</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ru.png" alt="Russia flag" class="gr-country-flag" onerror="this.style.display='none'"> Russia</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/de.png" alt="Germany flag" class="gr-country-flag" onerror="this.style.display='none'"> Germany</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/gb.png" alt="United Kingdom flag" class="gr-country-flag" onerror="this.style.display='none'"> United Kingdom</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/fr.png" alt="France flag" class="gr-country-flag" onerror="this.style.display='none'"> France</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/pl.png" alt="Poland flag" class="gr-country-flag" onerror="this.style.display='none'"> Poland</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ua.png" alt="Ukraine flag" class="gr-country-flag" onerror="this.style.display='none'"> Ukraine</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ro.png" alt="Romania flag" class="gr-country-flag" onerror="this.style.display='none'"> Romania</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/bg.png" alt="Bulgaria flag" class="gr-country-flag" onerror="this.style.display='none'"> Bulgaria</span>
       </div>
     </div>
     <div class="gr-region">
       <div class="gr-reg-label">Americas</div>
       <div class="gr-countries">
-        <span class="gr-country">🇧🇷 Brazil</span>
-        <span class="gr-country">🇲🇽 Mexico</span>
-        <span class="gr-country">🇨🇴 Colombia</span>
-        <span class="gr-country">🇦🇷 Argentina</span>
-        <span class="gr-country">🇺🇸 USA</span>
-        <span class="gr-country">🇨🇦 Canada</span>
-        <span class="gr-country">🇵🇪 Peru</span>
-        <span class="gr-country">🇨🇱 Chile</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/br.png" alt="Brazil flag" class="gr-country-flag" onerror="this.style.display='none'"> Brazil</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/mx.png" alt="Mexico flag" class="gr-country-flag" onerror="this.style.display='none'"> Mexico</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/co.png" alt="Colombia flag" class="gr-country-flag" onerror="this.style.display='none'"> Colombia</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ar.png" alt="Argentina flag" class="gr-country-flag" onerror="this.style.display='none'"> Argentina</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/us.png" alt="USA flag" class="gr-country-flag" onerror="this.style.display='none'"> USA</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/ca.png" alt="Canada flag" class="gr-country-flag" onerror="this.style.display='none'"> Canada</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/pe.png" alt="Peru flag" class="gr-country-flag" onerror="this.style.display='none'"> Peru</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/cl.png" alt="Chile flag" class="gr-country-flag" onerror="this.style.display='none'"> Chile</span>
       </div>
     </div>
     <div class="gr-region">
       <div class="gr-reg-label">Oceania &amp; Others</div>
       <div class="gr-countries">
-        <span class="gr-country">🇦🇺 Australia</span>
-        <span class="gr-country">🇳🇿 New Zealand</span>
-        <span class="gr-country">🇸🇬 Singapore</span>
-        <span class="gr-country">🇹🇷 Turkey</span>
-        <span class="gr-country">🇦🇿 Azerbaijan</span>
-        <span class="gr-country">🇰🇿 Kazakhstan</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/au.png" alt="Australia flag" class="gr-country-flag" onerror="this.style.display='none'"> Australia</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/nz.png" alt="New Zealand flag" class="gr-country-flag" onerror="this.style.display='none'"> New Zealand</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/sg.png" alt="Singapore flag" class="gr-country-flag" onerror="this.style.display='none'"> Singapore</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/tr.png" alt="Turkey flag" class="gr-country-flag" onerror="this.style.display='none'"> Turkey</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/az.png" alt="Azerbaijan flag" class="gr-country-flag" onerror="this.style.display='none'"> Azerbaijan</span>
+        <span class="gr-country"><img src="https://flagcdn.com/16x12/kz.png" alt="Kazakhstan flag" class="gr-country-flag" onerror="this.style.display='none'"> Kazakhstan</span>
       </div>
     </div>
   </div>
