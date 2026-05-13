@@ -22,7 +22,7 @@ const config = {
     secure: process.env.EMAIL_SECURE === 'true',
     user: process.env.EMAIL_USER || '',
     pass: process.env.EMAIL_PASS || '',
-    to: process.env.EMAIL_TO || 'sales@yominelectric.com',
+    to: process.env.EMAIL_TO || 'salaheddine@yominelectric.com',
     from: process.env.EMAIL_FROM || 'noreply@yominelectric.com'
   },
 

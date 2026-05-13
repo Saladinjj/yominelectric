@@ -10,7 +10,8 @@
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^16.6.1",
-    "express": "^4.22.2"
+    "express": "^4.22.2",
+    "nodemailer": "^6.10.0"
   },
   "engines": {
     "node": "20.x"

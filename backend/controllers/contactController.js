@@ -47,7 +47,7 @@ async function sendEmail(data, type = 'contact') {
   // nodemailer is optional — install with: npm install nodemailer
   try {
     const nodemailer = require('nodemailer');
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       host: config.email.host,
       port: config.email.port,
       secure: config.email.secure,
