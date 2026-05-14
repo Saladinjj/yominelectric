@@ -5,6 +5,8 @@
     { "src": "**/*", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/wap/(.*)", "status": 410 },
+    { "src": "/wap/(.*)\\.asp", "status": 410 },
     { "src": "/api/(.*)", "dest": "/backend/server.js" },
     { "src": "/", "dest": "/index.html" },
     { "src": "/about", "dest": "/about.html" },
