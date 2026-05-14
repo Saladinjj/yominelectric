@@ -184,6 +184,7 @@ const COUNTRIES = [
 function populateCountrySelect() {
   const sel = document.querySelector('select[data-field="country"]');
   if (!sel) return;
+  if (sel.options.length > 1) return; // already populated via HTML
   COUNTRIES.forEach(c => {
     const opt = document.createElement('option');
     opt.value = c;
