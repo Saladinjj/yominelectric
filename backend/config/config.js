@@ -18,8 +18,8 @@ const config = {
   // Email (for contact form forwarding)
   email: {
     host: process.env.EMAIL_HOST || 'mail.privateemail.com',
-    port: parseInt(process.env.EMAIL_PORT) || 465,
-    secure: process.env.EMAIL_SECURE !== 'false',
+    port: parseInt(process.env.EMAIL_PORT) || 587,
+    secure: process.env.EMAIL_SECURE === 'true',
     user: process.env.EMAIL_USER || '',
     pass: process.env.EMAIL_PASS || '',
     to: process.env.EMAIL_TO || 'salaheddine@yominelectric.com',

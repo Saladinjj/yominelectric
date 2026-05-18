@@ -57,6 +57,7 @@ async function sendEmail(data, type = 'contact') {
       host: config.email.host,
       port: config.email.port,
       secure: config.email.secure,
+      requireTLS: true,
       auth: { user: config.email.user, pass: config.email.pass },
       tls: { rejectUnauthorized: false }
     });
