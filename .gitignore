@@ -6,3 +6,5 @@ Thumbs.db
 *.lnk
 .claude/settings.local.json
 .claude/launch.json
+
+.vercel
